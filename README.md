@@ -10,4 +10,10 @@
 ## 현재 읽고 소화중인 책
 1. [누구나 자료구조와 알고리즘 (책)](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
 
+<br />
+
+## 그 외 강의와 강연    
+
+1. [격투게임의 전설 우메하라 선수 게임인생강연 (유튜브 영상)](https://github.com/DragooCho/TIL/blob/main/%EA%B7%B8%20%EC%99%B8%20%EA%B0%95%EC%9D%98%20%EB%98%90%EB%8A%94%20%EA%B0%95%EC%97%B0/%EA%B2%A9%ED%88%AC%EA%B2%8C%EC%9E%84%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EC%9A%B0%EB%A9%94%ED%95%98%EB%9D%BC%20%EC%84%A0%EC%88%98%20%EA%B2%8C%EC%9E%84%EC%9D%B8%EC%83%9D%EA%B0%95%EC%97%B0.md)
+
 
