@@ -14,7 +14,7 @@
 <br />
 
 ### 문제해결모음
-1. git_github_문제해결
+1. [git_github 문제해결](https://github.com/DragooCho/TIL/blob/main/%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%EB%AA%A8%EC%9D%8C/git_github_%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0.md)
 
 <br />
 
