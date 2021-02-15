@@ -9,7 +9,17 @@
 
 
 ### 현재 읽고 소화중인 책
-1. [누구나 자료구조와 알고리즘 (책)](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
+
+<details>
+<summary>1. 누구나 자료구조와 알고리즘 (책)</summary>
+<div markdown="1">       
+
+- [**-1장- 자료 구조가 중요한 까닭**](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/1%EC%9E%A5_%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EA%B0%80_%EC%A4%91%EC%9A%94%ED%95%9C_%EA%B9%8C%EB%8B%AD.md)
+
+- [**-2장- 알고리즘이 중요한 까닭**](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/2%EC%9E%A5_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4_%EC%A4%91%EC%9A%94%ED%95%9C_%EA%B9%8C%EB%8B%AD%20.md)
+
+</div>
+</details>
 
 <br />
 
