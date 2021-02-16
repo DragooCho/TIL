@@ -17,7 +17,7 @@ $ git pull
 
 ## git pull이 아니라 다른 명령어를 시도한다면 ???
 - 로컬에서 commit 안하고 깃허브 홈패이지에서       
-  README.md 파일을 수정한후 Git push로 시도하면 나오는 오류
+  README.md 파일을 수정한후 ```Git push```로 시도하면 나오는 오류
 
 `````````````````
 error: failed to push some refs to 'https://github.com/DragooCho/TIL.git'
