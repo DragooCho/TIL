@@ -38,9 +38,11 @@ $ git push -u origin +main
 // 기존에 master로 브렌치를 만들었다면
 $ git push -u origin +master
 ````````````````
+<br />
+<br />
+<br />
 
-
-## git pull 또는 merge를 취소 할려면...<br />
+## git pull 또는 merge를 취소 할려면... <br />
 
 ```````````````
 $ git reset --hard ORIG_HEAD
