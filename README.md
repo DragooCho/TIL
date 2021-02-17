@@ -19,6 +19,8 @@
 - [**-2장- 알고리즘이 중요한 까닭**](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/2%EC%9E%A5_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4_%EC%A4%91%EC%9A%94%ED%95%9C_%EA%B9%8C%EB%8B%AD%20.md)
 
 - [**-3장- 빅 오 표기법**](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/3%EC%9E%A5_%EB%B9%85_%EC%98%A4_%ED%91%9C%EA%B8%B0%EB%B2%95.md)
+  
+- [**-4장- 빅 오로 코드 속도 올리기**](https://github.com/DragooCho/TIL/blob/main/%EB%88%84%EA%B5%AC%EB%82%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20(%EC%B1%85)/4%EC%9E%A5_%EB%B9%85_%EC%98%A4%EB%A1%9C_%EC%BD%94%EB%93%9C_%EC%86%8D%EB%8F%84_%EC%98%AC%EB%A6%AC%EA%B8%B0.md)
 
 </div>
 </details>
