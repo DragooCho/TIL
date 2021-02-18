@@ -1,4 +1,4 @@
-# TIL (Today I Learn)
+# 👨‍💻‍ TIL (Today I Learn)
 
 - 🏃‍♂️ 의미가 있는 기록은 나의 힘이 되어준다!!! <br /><br />
 - ✒ 그동안 배웠던 개발자가 알아야 할 개념들       
@@ -8,7 +8,7 @@
 <br />
 
 
-### 현재 읽고 소화중인 책
+### 📖 현재 읽고 소화중인 책
 
 <details>
 <summary>1. 누구나 자료구조와 알고리즘 (책)</summary>
@@ -27,13 +27,13 @@
 
 <br />
 
-### 문제해결모음
+### 💡 문제해결모음
 1. [git_github 문제해결](https://github.com/DragooCho/TIL/blob/main/%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%EB%AA%A8%EC%9D%8C/git_github_%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0.md)
 
 <br />
 
 
-### 사이드 프로젝트 기록
+### 🛠 사이드 프로젝트 기록
 1. [짤방 이미지 편집 툴(진행중)](https://github.com/DragooCho/TIL/blob/main/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%A1%9D/%EC%A7%A4%EB%B0%A9%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%ED%8E%B8%EC%A7%91%20%ED%88%B4.md)
 
 <br />
