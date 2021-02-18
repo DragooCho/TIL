@@ -34,7 +34,7 @@
 
 
 ### 사이드 프로젝트 기록
-1. [짤방 이미지 편집 툴](https://github.com/DragooCho/TIL/blob/main/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%A1%9D/%EC%A7%A4%EB%B0%A9%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%ED%8E%B8%EC%A7%91%20%ED%88%B4.md)
+1. [짤방 이미지 편집 툴(진행중)](https://github.com/DragooCho/TIL/blob/main/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%A1%9D/%EC%A7%A4%EB%B0%A9%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%ED%8E%B8%EC%A7%91%20%ED%88%B4.md)
 
 <br />
 
