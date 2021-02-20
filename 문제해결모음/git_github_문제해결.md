@@ -52,3 +52,20 @@ $ git reset --merge ORIG_HEAD
 - ORIG_HEAD라고 하는것은 이전에 작업한 곳의 HEAD라고 한다.     
   pull 이나 merge를 하는 경우 ORIG_HEAD를 남기게 되는데,    
   pull을 잘못 받거나 merge의 명령어라 통하지 않으면 이것을 이용한다.
+
+<br />
+<br />
+
+## git add 취소,  commit 취소 할려면 ?
+
+- git add 취소
+  ```
+  $ git reset // (전체 파일 add 취소)
+  $ git reset HEAD <파일or디렉토리 이름> // (특정 파일 add 취소)
+  ```
+- git commit 취소
+  ```
+  $ git reset HEAD^     // (가장 최신 커밋 1개 취소(삭제))
+  $ git reset HEAD^^    // (가장 최신 커밋 2개 취소(삭제))
+  ```
+  꺽쇠 갯수에 따라 최신 커밋을 필요한 만큼 순서대로 삭제 가능
