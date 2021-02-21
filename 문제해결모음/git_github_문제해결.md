@@ -60,8 +60,8 @@ $ git reset --merge ORIG_HEAD
 
 - git add 취소
   ```
-  $ git reset // (전체 파일 add 취소)
-  $ git reset HEAD <파일or디렉토리 이름> // (특정 파일 add 취소)
+  $ git reset                            // (전체 파일 add 취소)
+  $ git reset HEAD <파일or디렉토리 이름>  // (특정 파일 add 취소)
   ```
 - git commit 취소
   ```
