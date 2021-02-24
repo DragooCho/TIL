@@ -33,9 +33,10 @@
 
 <br />
 
-리액트를 조금이라도 아는 사람은 유명한 보일러 플레이트로 프로젝트를 시작하기 위해  
-터미널에서 설치를 원하는 디렉토리로 진입한 다음 ''npx create-react-app JJalbang_create_custom" 을 
-입력했으나 위 사진 같은 이유로 거절 당했다....  얌전히 소문자로 바꾸고 다시 입력했다.
+리액트를 조금이라도 아는 사람은 유명한 보일러 플레이트로 프로젝트를 시작하기 위해         
+터미널에서 설치를 원하는 디렉토리로 진입한 다음      
+"npx create-react-app JJalbang_create_custom"        
+을 입력했으나 위 사진 같은 이유로 거절 당했다....  얌전히 소문자로 바꾸고 다시 입력했다.
 
 <br />
 
@@ -90,11 +91,7 @@ repository를 만들어 버리기 때문이다.
 
 ![](https://github.com/DragooCho/TIL/blob/main/image/jjalbang5.png?raw=true)
 
-보다시피 해당하는 링크 
-
-https://github.com/DragooCho/jjalbang_create_custom.git
-
-로 들어가면 CRA의 초기세팅 내용 그대로 깃허브에 올라욌음을 알 수있다.
+그림처럼 CRA의 초기세팅 내용 그대로 깃허브에 올라왔음을 알 수 있다.
 
 또 보면 branch가   master -> main 로 바뀌여 있는데..... 
 
@@ -102,7 +99,11 @@ https://github.com/DragooCho/jjalbang_create_custom.git
 
 [마이크로소프트 깃허브, '마스터·슬레이브' 용어 없앤다 - 씨넷코리아 | 글로벌 IT 미디어 (cnet.co.kr)](https://www.cnet.co.kr/view/?no=20200728102539)
 
-깃허브 측에서 Black Lives Matter 운동의 이유로 의도적으로 main으로 생성된다고 한다.
+깃허브 측에서 Black Lives Matter 운동의 이유로 
+
+기본으로 주어진 세팅 그대로 new repository 작업을 했을시, 
+
+main으로 생성된다고 한다.
 
 원한다면 기존의 master로 바꿀 수 있다고는 하지만 좋은 뜻으로 나온 정책이고 
 
