@@ -1,3 +1,8 @@
+# git, github의 문제해결 모음
+
+<br />
+<br />
+
 ## github에 저장된 레지스트리가 로컬파일보다 commit이 먼저 앞서있다면...
 
 - 보통 'README.md' 같은 파일을 깃허브 홈페이지에서 수정했다면      
@@ -55,6 +60,7 @@ $ git reset --merge ORIG_HEAD
 
 <br />
 <br />
+<br />
 
 ## git add 취소,  commit 취소 할려면 ?
 
@@ -69,3 +75,21 @@ $ git reset --merge ORIG_HEAD
   $ git reset HEAD^^    // (가장 최신 커밋 2개 취소(삭제))
   ```
   꺽쇠 갯수에 따라 최신 커밋을 필요한 만큼 순서대로 삭제 가능
+
+<br />
+<br />
+<br />
+
+## (git reamote) 나의 디렉토리에서 깃허브 인증 변경법
+
+```
+git remote set-url origin "https://<유저 닉네임>@github.com/<유저 닉네임>/<프로젝트 이름>.git"
+```
+
+- 사용예시
+
+```
+$ git remote set-url origin "https://userNickName@github.com/userNickName/myProjectApp.git
+```
+
+이후에 **`git pull` 을 터미널에 입력하면 나의 프로젝트 디렉토리에서 인증전환에 성공**
