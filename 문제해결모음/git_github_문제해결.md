@@ -97,3 +97,17 @@ $ git remote set-url origin "https://userNickName@github.com/userNickName/myProj
 ```
 
 이후에 **`git pull` 을 터미널에 입력하면 나의 프로젝트 디렉토리에서 인증전환에 성공**
+
+<br />
+<br />
+<br />
+
+## 레포지토리 내의 git을 모두 지우고 싶을 때는... 
+
+```shell
+$ rm -rf .git
+```
+
+프로젝트 폴더로 이동한 뒤 명령어를 통해 `.git` 파일을 지우면 git commit history가 삭제된다.
+
+> **히스토리만 지워지고 프로젝트 디렉토리의 파일내용이 변경/삭제되지 않는다.** 
