@@ -40,7 +40,7 @@
 ### 🛠 사이드 프로젝트 기록
 
 <details>
-<summary>보일러 플레이트제작(진행중)</summary>
+<summary>보일러 플레이트제작</summary>
 <div markdown="1">       
 
 1. [**프로젝트 준비와 Git 세팅**](https://github.com/DragooCho/TIL/blob/main/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%A1%9D/%EB%B3%B4%EC%9D%BC%EB%9F%AC%20%ED%94%8C%EB%A0%88%EC%9D%B4%ED%8A%B8%20%EC%A0%9C%EC%9E%91/1.%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%A4%80%EB%B9%84_and_git_%EC%84%B8%ED%8C%85.md)
@@ -56,7 +56,7 @@
 
 
 <details>
-<summary>짤방 제작웹툴(진행중)</summary>
+<summary>짤방 제작웹툴</summary>
 <div markdown="1">       
 
 1. [**CRA(Create-React-App)세팅**](https://github.com/DragooCho/TIL/blob/main/%EC%82%AC%EC%9D%B4%EB%93%9C%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%A1%9D/%EC%A7%A4%EB%B0%A9%EC%A0%9C%EC%9E%91%EC%9B%B9%ED%88%B4/CRA(Create-React-App)%EC%84%B8%ED%8C%85.md)
