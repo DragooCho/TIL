@@ -89,8 +89,6 @@
   나의 블로그 웹주소
   https://velog.io/@dragoocho
 
-<br />
-
 - 2021-04-22     
   본격적인 1차 웹사이트 구현    
   https://velog.io/@dragoocho/%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8-1%EC%B0%A8-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B5%AC%ED%98%84
