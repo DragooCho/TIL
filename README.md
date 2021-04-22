@@ -5,7 +5,8 @@
 - 🏃‍♂️ 의미가 있는 기록은 나의 힘이 되어준다!!! <br />
 - ✒ 그동안 배웠던 개발자가 알아야 할 개념들       
 강의나 책에서 익혔던 것을 복습한다는 의미에서        
-핵심 위주로 정리해 꾸준히 기록한다.    
+핵심 위주로 정리해 꾸준히 기록한다. 
+   
 <br />
 <br />
 
@@ -30,10 +31,12 @@
 </details>
 
 <br />
+<br />
 
 ### 💡 문제해결모음
 1. [git_github 문제해결](https://github.com/DragooCho/TIL/blob/main/%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0%EB%AA%A8%EC%9D%8C/git_github_%EB%AC%B8%EC%A0%9C%ED%95%B4%EA%B2%B0.md)
 
+<br />
 <br />
 
 
@@ -66,6 +69,9 @@
 </details>
 <br />
 
+<br />
+<br />
+
 ### 👩‍🏫 그 외 강의와 강연  
 
 - 개발자, 프로그래밍에 직접적인 연관이 없을 수도 있으나  
@@ -73,3 +79,24 @@
 
 1. [격투게임의 전설 우메하라 선수 게임인생강연 시청소감](https://github.com/DragooCho/TIL/blob/main/%EA%B7%B8%20%EC%99%B8%20%EA%B0%95%EC%9D%98%20%EB%98%90%EB%8A%94%20%EA%B0%95%EC%97%B0/%EA%B2%A9%ED%88%AC%EA%B2%8C%EC%9E%84%EC%9D%98%20%EC%A0%84%EC%84%A4%20%EC%9A%B0%EB%A9%94%ED%95%98%EB%9D%BC%20%EC%84%A0%EC%88%98%20%EA%B2%8C%EC%9E%84%EC%9D%B8%EC%83%9D%EA%B0%95%EC%97%B0.md)
 
+<br />
+<br />
+
+### 🏛  벨로그 (기술블로그) 업데이트 소식
+
+- 지금부터 본인이 운영하는 블로그의 업데이트 기록을 여기에 올리기로 했다. ~~진작에 이렇게 했어야 했다.~~
+  
+  나의 블로그 웹주소
+  https://velog.io/@dragoocho
+
+<br />
+
+- 2021-04-22     
+  본격적인 1차 웹사이트 구현    
+  https://velog.io/@dragoocho/%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8-1%EC%B0%A8-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B5%AC%ED%98%84
+
+  1차 배포용 브렌치 생성    
+  https://velog.io/@dragoocho/1%EC%B0%A8-%EB%B0%B0%ED%8F%AC%EC%9A%A9-%EB%B8%8C%EB%A0%8C%EC%B9%98-%EC%83%9D%EC%84%B1
+
+  깃허브 홈페이지 생성 & 1차 배포   
+  https://velog.io/@dragoocho/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%83%9D%EC%84%B1-1%EC%B0%A8-%EB%B0%B0%ED%8F%AC
