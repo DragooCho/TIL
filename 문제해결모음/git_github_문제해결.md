@@ -60,8 +60,14 @@ $ git reset --merge ORIG_HEAD
   pull 이나 merge를 하는 경우 ORIG_HEAD를 남기게 되는데,    
   pull을 잘못 받거나 merge의 명령어라 통하지 않으면 이것을 이용한다.
 
-- git revert는 reset처럼 특정 버전으로 되돌아갈 수 있지만,     
+<br />
+<br />
+<br />
+
+## 이전 커밋으로 되돌리되 지금의 커밋 기록도 남기고 싶다면???
+- ``git revert``는 reset처럼 특정 버전으로 되돌아갈 수 있지만,     
   되돌린 버전 이후의 버전들의 이력은 남게된다.
+
 <br />
 <br />
 <br />
