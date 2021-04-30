@@ -98,6 +98,9 @@
 
   [**깃허브 홈페이지 생성 & 1차 배포**](https://velog.io/@dragoocho/%EA%B9%83%ED%97%88%EB%B8%8C-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%83%9D%EC%84%B1-1%EC%B0%A8-%EB%B0%B0%ED%8F%AC)
   
- - 2021-04-23     
+- 2021-04-23     
   [**transition 효과 추가**](https://velog.io/@dragoocho/transition-%ED%9A%A8%EA%B3%BC-%EC%B6%94%EA%B0%80)
+ 
+- 2021-04-25     
+  [**section: 일반 구획 요소**](https://velog.io/@dragoocho/section-%EC%9D%BC%EB%B0%98-%EA%B5%AC%ED%9A%8D-%EC%9A%94%EC%86%8C)
 
