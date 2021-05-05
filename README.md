@@ -114,3 +114,7 @@
   [**브라우저에서 특수문자를 출력할려면? -javascript 템플릿 리터럴-**](https://velog.io/@dragoocho/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%ED%8A%B9%EC%88%98%EB%AC%B8%EC%9E%90%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%A0%EB%A0%A4%EB%A9%B4-javascript-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A6%AC%ED%84%B0%EB%9F%B4-)
 
   [**백준 2588번 문제 입력창 줄바꿈과 응용**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-2588%EB%B2%88-%EB%AC%B8%EC%A0%9C-%EC%9E%85%EB%A0%A5%EC%B0%BD-%EC%A4%84%EB%B0%94%EA%BF%88%EA%B3%BC-%EC%9D%91%EC%9A%A9)
+
+- 2021-05-05     
+  [**백준 알고리즘의 자잘한 제출코드들 (조건문)**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9E%90%EC%9E%98%ED%95%9C-%EB%AC%B8%EC%A0%9C%EB%93%A4#%EB%B0%B1%EC%A4%80-2753%EB%B2%88-javascript-%EB%AC%B8%EC%A0%9C)
+
