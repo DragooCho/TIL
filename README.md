@@ -118,3 +118,8 @@
 - 2021-05-05     
   [**백준 알고리즘의 자잘한 제출코드들 (조건문)**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9E%90%EC%9E%98%ED%95%9C-%EB%AC%B8%EC%A0%9C%EB%93%A4#%EB%B0%B1%EC%A4%80-2753%EB%B2%88-javascript-%EB%AC%B8%EC%A0%9C)
 
+- 2021-05-06    
+  [**백준 14681번 JavaScript 문제**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-14681%EB%B2%88-JavaScript)
+
+
+
