@@ -129,5 +129,8 @@
 - 2021-05-08    
   [**백준 2739번 JavaScript 문제**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-2739%EB%B2%88-JavaScript-%EB%AC%B8%EC%A0%9C)
 
+- 2021-05-09    
+  [**백준 8393번 JavaScript 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-8393%EB%B2%88-JavaScript-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
+
 
 
