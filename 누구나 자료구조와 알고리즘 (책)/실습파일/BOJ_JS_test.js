@@ -23,15 +23,24 @@
 // const [m, ...m_arr] = input.slice(n+1);
 
 const fs = require("fs");
-let input = (process.platform === "linux"
+const [n, ...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `10`
-).trim();
+  : `5
+1 1
+12 34
+5 500
+40 60
+1000 1000
+`
+)
+  .trim()
+  .split("\n");
 
-const number = parseInt(input);
-let answer = 0;
-for (let i = 1; i <= number; i++) {
-  answer += i;
+let answer = [];
+
+for (let i = 0; i < n; i++) {
+  let ABanswer = Number(arr[i].split(" ")[0]) + Number(arr[i].split(" ")[1]);
+  answer = answer + (ABanswer + "\n");
 }
 
 console.log(answer);
