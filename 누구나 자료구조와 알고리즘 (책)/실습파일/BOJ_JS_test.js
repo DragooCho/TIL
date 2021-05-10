@@ -10,7 +10,7 @@
 // const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
 
 //4. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄에 공백으로 구분된 n개의 값들을 입력받을 때
-// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/);
+// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/)<-- 현재는 비권장;;
 
 //5. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄부터 n개의 줄에 걸쳐 한 줄에 하나의 값을 입력받을 때
 // const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
@@ -23,24 +23,38 @@
 // const [m, ...m_arr] = input.slice(n+1);
 
 const fs = require("fs");
-const [n, ...arr] = (process.platform === "linux"
+const [...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `5
-1 1
-12 34
-5 500
-40 60
-1000 1000
+  : `1 1
+2 3
+3 4
+0 0
+5 2
+0 0
 `
 )
   .trim()
   .split("\n");
 
-let answer = [];
+answer = [];
+console.log(arr);
 
-for (let i = 0; i < n; i++) {
-  let ABanswer = Number(arr[i].split(" ")[0]) + Number(arr[i].split(" ")[1]);
-  answer = answer + (ABanswer + "\n");
-}
+answer.push(arr[0].split(" "));
 
+// i = 0;
+// while (i <= arr.length - 1) {
+//   let A = parseInt(arr[i].split(" ")[0]);
+//   let B = parseInt(arr[i].split(" ")[1]);
+//   if (A !== 0 || B !== 0) {
+//     answer += `${A + B}` + "\n";
+//   } else {
+//     (" "); // "" or " " 도 정답처리된다.
+//   }
+//   i++;
+// }
+
+console.log(arr);
 console.log(answer);
+
+// 삼항연산자 answer += A !== 0 || B !== 0 ? `${A + B}` + "\n" : "";
+// 로 대체 가능하지만 break문을 쓰지 못한다.
