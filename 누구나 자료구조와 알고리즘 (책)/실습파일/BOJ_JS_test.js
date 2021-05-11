@@ -23,38 +23,32 @@
 // const [m, ...m_arr] = input.slice(n+1);
 
 const fs = require("fs");
-const [...arr] = (process.platform === "linux"
+const input = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `1 1
-2 3
-3 4
-0 0
-5 2
-0 0
-`
-)
-  .trim()
-  .split("\n");
+  : `1`
+).trim();
 
-answer = [];
-console.log(arr);
+let turnNumber;
+let N = input;
 
-answer.push(arr[0].split(" "));
+let answerNumber = 0;
+while (true) {
+  N < 10 ? (N = "0" + N) : (N = String(N));
 
-// i = 0;
-// while (i <= arr.length - 1) {
-//   let A = parseInt(arr[i].split(" ")[0]);
-//   let B = parseInt(arr[i].split(" ")[1]);
-//   if (A !== 0 || B !== 0) {
-//     answer += `${A + B}` + "\n";
-//   } else {
-//     (" "); // "" or " " 도 정답처리된다.
-//   }
-//   i++;
-// }
+  let numberAB = Number(N[0]) + Number(N[1]);
+  numberAB = String(numberAB);
 
-console.log(arr);
-console.log(answer);
+  numberAB > 9
+    ? ((turnNumber = N[1] + numberAB[1]), (turnNumber = Number(turnNumber)))
+    : ((turnNumber = N[1] + numberAB), (turnNumber = Number(turnNumber)));
 
-// 삼항연산자 answer += A !== 0 || B !== 0 ? `${A + B}` + "\n" : "";
-// 로 대체 가능하지만 break문을 쓰지 못한다.
+  answerNumber++;
+
+  if (turnNumber === Number(input)) {
+    break;
+  } else {
+    N = turnNumber;
+  }
+}
+
+console.log(answerNumber);
