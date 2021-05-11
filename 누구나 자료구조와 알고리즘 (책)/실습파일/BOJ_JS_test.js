@@ -10,7 +10,7 @@
 // const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
 
 //4. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄에 공백으로 구분된 n개의 값들을 입력받을 때
-// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/)<-- 현재는 비권장;;
+// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/)
 
 //5. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄부터 n개의 줄에 걸쳐 한 줄에 하나의 값을 입력받을 때
 // const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
@@ -23,32 +23,29 @@
 // const [m, ...m_arr] = input.slice(n+1);
 
 const fs = require("fs");
-const input = (process.platform === "linux"
+const [n, ...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `1`
-).trim();
+  : `5
+20 10 6 30 7
+`
+)
+  .trim()
+  .split(/\s/);
 
-let turnNumber;
-let N = input;
+let mum;
 
-let answerNumber = 0;
-while (true) {
-  N < 10 ? (N = "0" + N) : (N = String(N));
-
-  let numberAB = Number(N[0]) + Number(N[1]);
-  numberAB = String(numberAB);
-
-  numberAB > 9
-    ? ((turnNumber = N[1] + numberAB[1]), (turnNumber = Number(turnNumber)))
-    : ((turnNumber = N[1] + numberAB), (turnNumber = Number(turnNumber)));
-
-  answerNumber++;
-
-  if (turnNumber === Number(input)) {
-    break;
-  } else {
-    N = turnNumber;
+for (let i = 0; i < n - 1; i++) {
+  for (let z = 0; z < n - 1; z++) {
+    LNum = Number(arr[z]);
+    RNum = Number(arr[z + 1]);
+    if (LNum > RNum) {
+      mum = LNum;
+      LNum = RNum;
+      RNum = mum;
+      arr[z] = LNum;
+      arr[z + 1] = RNum;
+    }
   }
 }
 
-console.log(answerNumber);
+console.log(arr[0] + " " + arr[n - 1]);
