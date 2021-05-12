@@ -26,26 +26,22 @@ const fs = require("fs");
 const [n, ...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
   : `5
-20 10 6 30 7
-`
+20 10 35 30 7`
 )
   .trim()
   .split(/\s/);
 
-let mum;
+let Minimum = Number(arr[0]);
+let Maximum = Number(arr[0]);
 
-for (let i = 0; i < n - 1; i++) {
-  for (let z = 0; z < n - 1; z++) {
-    LNum = Number(arr[z]);
-    RNum = Number(arr[z + 1]);
-    if (LNum > RNum) {
-      mum = LNum;
-      LNum = RNum;
-      RNum = mum;
-      arr[z] = LNum;
-      arr[z + 1] = RNum;
-    }
+for (let i = 0; i < n; i++) {
+  ArrNum = Number(arr[i]);
+  if (Maximum < ArrNum) {
+    Maximum = ArrNum;
+  }
+  if (Minimum > ArrNum) {
+    Minimum = ArrNum;
   }
 }
 
-console.log(arr[0] + " " + arr[n - 1]);
+console.log(Minimum + " " + Maximum);
