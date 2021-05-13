@@ -23,23 +23,18 @@
 // const [m, ...m_arr] = input.slice(n+1);
 
 const fs = require("fs");
-const [...arr] = (process.platform === "linux"
+const [n, ...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `42
-84
-252
-420
-840
-126
-42
-84
-420
-126
+  : `150
+266 356
+427 35 56 2
+24 55 67 98
 `
 )
   .trim()
   .split("\n");
 
+let count = Number(n);
 let inputLines = [];
 let arrLines = arr.map((element) => element.split(" "));
 
@@ -47,19 +42,5 @@ arrLines.forEach((arrLines) => {
   inputLines.push(arrLines.map((e) => Number(e)));
 });
 
-let aArray = [];
-
-for (let i = 0; i < inputLines.length; i++) {
-  let LNum = inputLines[i][0] % 42;
-  aArray.push(LNum);
-}
-
-aArray.sort((a, b) => a - b);
-
-for (let j = 0; j < aArray.length; j++) {
-  while (aArray[j] === aArray[j + 1]) {
-    aArray.splice(j, 1);
-  }
-}
-
+console.log(count);
 console.log(inputLines);

@@ -1,26 +1,29 @@
-// Ctrl + Ait + N --- 입출력 작동
-
 const fs = require("fs");
-const input = (process.platform === "linux"
+const [...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `5
-24 10 6 30 9
-20 56 6 31 7
-40 17 6 30 1
-10 10 6 3 7
+  : `150
+266
+427
 `
 )
   .trim()
   .split("\n");
 
-let count = Number(input[0]);
-let inputLine = input[1].split(" ").map((str) => Number(str));
+let arrLines = arr.map((element) => Number(element));
 
-// let numberStr = input[1].split(" ");
-// let numbers = numberStr.map((cur) => Number(cur));
+let strNumbers = String(arrLines[0] * arrLines[1] * arrLines[2]);
+let answer = "";
 
-console.log(count);
-console.log(inputLine);
+for (let i = 0; i <= 9; i++) {
+  let numArr = "";
+  for (let j = 0; j < strNumbers.length; j++) {
+    let strNum = Number(strNumbers[j]);
+    if (i === strNum) {
+      numArr += i;
+    }
+  }
 
-// console.log(numberStr);
-// console.log(numbers);
+  answer += numArr.length + "\n";
+}
+
+console.log(answer);
