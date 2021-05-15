@@ -25,41 +25,29 @@
 const fs = require("fs");
 const [...arr] = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
-  : `42
-84
-252
-420
-840
-126
-42
-84
-420
-126
+  : `5
+OOXXOXXOOO
+OOXXOOXXOO
+OXOXOXOXOXOXOX
+OOOOOOOOOO
+OOOOXOOOOXOOOOX
 `
 )
   .trim()
   .split("\n");
 
-let inputLines = [];
-let arrLines = arr.map((element) => element.split(" "));
+let nNumber = Number(arr[0]);
+let answer = "";
 
-arrLines.forEach((arrLines) => {
-  inputLines.push(arrLines.map((e) => Number(e)));
-});
+for (let i = 1; i <= nNumber; i++) {
+  let count = 0;
+  let sum = 0;
 
-let aArray = [];
-
-for (let i = 0; i < inputLines.length; i++) {
-  let LNum = inputLines[i][0] % 42;
-  aArray.push(LNum);
-}
-
-aArray.sort((a, b) => a - b);
-
-for (let j = 0; j < aArray.length; j++) {
-  while (aArray[j] === aArray[j + 1]) {
-    aArray.splice(j, 1);
+  for (let j = 0; j < arr[i].length; j++) {
+    arr[i][j] === "O" ? count++ : (count = 0);
+    sum += count;
   }
+  answer += sum + "\n";
 }
 
-console.log(inputLines);
+console.log(answer);
