@@ -4,10 +4,11 @@ const fs = require("fs");
 const input = (process.platform === "linux"
   ? fs.readFileSync("/dev/stdin").toString()
   : `5
-24 10 6 30 9
-20 56 6 31 7
-40 17 6 30 1
-10 10 6 3 7
+5 50 50 70 80 100
+7 100 95 90 80 70 60 50
+3 70 90 80
+3 70 90 81
+9 100 99 98 97 96 95 94 93 91
 `
 )
   .trim()
@@ -16,12 +17,26 @@ const input = (process.platform === "linux"
 let inputLine = input.map((num) =>
   num.split(" ").map((array) => Number(array))
 );
-let count = inputLine[0][0];
 let answer = "";
 
-answer = inputLine.map((arr) => arr[0]);
+let nNumber = inputLine[0][0];
 
-console.log(typeof count);
-console.log(inputLine);
+for (let i = 1; i <= nNumber; i++) {
+  let scoreSum = 0;
+  let midScore = 0;
+  let count = 0;
+  for (let j = 1; j <= inputLine[i][0]; j++) {
+    scoreSum += inputLine[i][j];
+  }
+  midScore = scoreSum / inputLine[i][0];
+
+  for (let z = 1; z <= inputLine[i][0]; z++) {
+    let parMidScore = parseInt(midScore);
+    if (parMidScore < inputLine[i][z]) {
+      count++;
+    }
+  }
+  answer += (100 / (inputLine[i][0] / count)).toFixed(3) + "%" + "\n";
+}
 
 console.log(answer);
