@@ -180,6 +180,8 @@
 - 2021-05-16    
   [**백준 4673 번 JavaScript 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-4673-%EB%B2%88-JavaScript-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
 
+  [**백준 15596번 JavaScript(?) 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-15596%EB%B2%88-JavaScript-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
+
 
 
 

@@ -27,25 +27,27 @@
 // A.splice(B, 1);
 // console.log(A);
 
-let arr = [];
-let answer = [];
-const start = () => {
-  for (let i = 1; i <= 10000; i++) {
-    let N = 0;
-    let stringNumber = String(i);
-    for (let j = 0; j < stringNumber.length; j++) {
-      N += Number(stringNumber[j]);
-    }
-    let nNum = i + N;
-    arr.push(nNum);
-  }
+// C, C11, C (Clang), C11 (Clang): long long sum(int *a, int n);
+// a: 합을 구해야 하는 정수 n개가 저장되어 있는 배열 (0 ≤ a[i] ≤ 1,000,000, 1 ≤ n ≤ 3,000,000)
+// n: 합을 구해야 하는 정수의 개수
+// 리턴값: a에 포함되어 있는 정수 n개의 합
 
-  for (let i = 1; i <= 10000; i++) {
-    if (arr.indexOf(i) === -1) {
-      answer += i + "\n";
-    }
-  }
-  console.log(answer);
-};
+let n = 4;
+let a = [3, 8, 2, 6];
+let b = [3, 1, 2, 8];
 
-start();
+function solve(event) {
+  let ans = 0;
+  for (let i = 0; i < n; i++) {
+    ans += event[i];
+  }
+  return console.log(ans);
+}
+
+solve(b);
+
+// def solve(a):
+//     ans = 0
+//     for i in a:
+//         ans = ans + i
+//     return ans
