@@ -1,46 +1,51 @@
-// Ctrl + Ait + N --- 입출력 작동
+// const fs = require("fs");
+// const [n, ...arr] = (process.platform === "linux"
+//   ? fs.readFileSync("/dev/stdin").toString()
+//   : `150
+// 266 356
+// 427 35 56 2
+// 24 55 67 98
+// `
+// )
+//   .trim()
+//   .split("\n");
 
-//1. 하나의 값을 입력받을 때
-// const input = require("fs").readFileSync("/dev/stdin").toString().trim();
+// let count = Number(n);
+// let inputLines = [];
+// let arrLines = arr.map((element) => element.split(" "));
 
-//2. 공백으로 구분된 한 줄의 값들을 입력받을 때
-// const input = require("fs").readFileSync("/dev/stdin").toString().trim().split(" ");
+// arrLines.forEach((arrLines) => {
+//   inputLines.push(arrLines.map((e) => Number(e)));
+// });
 
-//3. 여러 줄의 값들을 입력받을 때
-// const input = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
+// console.log(count);
+// console.log(inputLines);
 
-//4. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄에 공백으로 구분된 n개의 값들을 입력받을 때
-// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/)
+// let A = [1, 2, 3, 4, 5];
+// let B = [3, 4];
 
-//5. 첫 번째 줄에 자연수 n을 입력받고, 그 다음줄부터 n개의 줄에 걸쳐 한 줄에 하나의 값을 입력받을 때
-// const [n, ...arr] = require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
+// A.splice(B, 1);
+// console.log(A);
 
-//6. 하나의 값 또는 공백으로 구분된 여러 값들을 여러 줄에 걸쳐 뒤죽박죽 섞여서 입력받을 때
-//ex) n 입력 - 공백으로 구분된 n개의 값 입력 - m 입력 - 여러 줄에 걸쳐 m개의 값 입력
-// const input = require("fs").readFileSync("/dev/stdin").toString().trim().split(/\s/);
-// const n = input[0];
-// const n_arr = input.slice(1, n+1);
-// const [m, ...m_arr] = input.slice(n+1);
+let arr = [];
+let answer = [];
+const start = () => {
+  for (let i = 1; i <= 10000; i++) {
+    let N = 0;
+    let stringNumber = String(i);
+    for (let j = 0; j < stringNumber.length; j++) {
+      N += Number(stringNumber[j]);
+    }
+    let nNum = i + N;
+    arr.push(nNum);
+  }
 
-const fs = require("fs");
-const [n, ...arr] = (process.platform === "linux"
-  ? fs.readFileSync("/dev/stdin").toString()
-  : `150
-266 356
-427 35 56 2
-24 55 67 98
-`
-)
-  .trim()
-  .split("\n");
+  for (let i = 1; i <= 10000; i++) {
+    if (arr.indexOf(i) === -1) {
+      answer += i + "\n";
+    }
+  }
+  console.log(answer);
+};
 
-let count = Number(n);
-let inputLines = [];
-let arrLines = arr.map((element) => element.split(" "));
-
-arrLines.forEach((arrLines) => {
-  inputLines.push(arrLines.map((e) => Number(e)));
-});
-
-console.log(count);
-console.log(inputLines);
+start();

@@ -22,9 +22,9 @@ let answer = "";
 let nNumber = inputLine[0][0];
 
 for (let i = 1; i <= nNumber; i++) {
-  let scoreSum = 0;
-  let midScore = 0;
-  let count = 0;
+  let scoreSum = null;
+  let midScore = null;
+  let count = null;
   for (let j = 1; j <= inputLine[i][0]; j++) {
     scoreSum += inputLine[i][j];
   }
