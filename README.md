@@ -178,3 +178,5 @@
 
 -   2021-05-18  
     [**[컴퓨터 환경셋팅] WSL 2 기본터미널 설정**](https://velog.io/@dragoocho/%EC%BB%B4%ED%93%A8%ED%84%B0-%ED%99%98%EA%B2%BD%EC%85%8B%ED%8C%85-WSL-2-%EA%B8%B0%EB%B3%B8%ED%84%B0%EB%AF%B8%EB%84%90-%EC%84%A4%EC%A0%95)
+
+    [**git commit이 진행 안될 때의 팁**](https://velog.io/@dragoocho/git-commit%EC%9D%B4-%EC%A7%84%ED%96%89-%EC%95%88%EB%90%A0-%EB%95%8C%EC%9D%98-%ED%8C%81)
