@@ -1,30 +1,21 @@
 const fs = require("fs");
 const [...arr] = (
-    process.platform === "linux"
-        ? fs.readFileSync("/dev/stdin").toString()
-        : `150
-266
-427
+  process.platform === "linux"
+    ? fs.readFileSync("/dev/stdin").toString()
+    : `11
+10987654321
 `
 )
-    .trim()
-    .split("\n");
+  .trim()
+  .split("\n");
 
-let arrLines = arr.map((element) => Number(element));
+// let sum = 0;
 
-let strNumbers = String(arrLines[0] * arrLines[1] * arrLines[2]);
-let answer = "";
+// for (let num of arr[1]) {
+//   sum += Number(num);
+// }
 
-for (let i = 0; i <= 9; i++) {
-    let numArr = "";
-    for (let j = 0; j < strNumbers.length; j++) {
-        let strNum = Number(strNumbers[j]);
-        if (i === strNum) {
-            numArr += i;
-        }
-    }
+let newArr = Array.from(arr[1]);
 
-    answer += numArr.length + "\n";
-}
-
-console.log(answer);
+let sum = newArr.map((n) => +n).reduce((a, b) => a + b);
+console.log(sum);
