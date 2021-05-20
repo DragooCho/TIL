@@ -187,3 +187,6 @@
   [**백준 11654번 Node.js 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-11654%EB%B2%88-Node.js-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
 
   [**백준 11720번 Node.js 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-11720-%EB%B2%88-Node.js-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
+
+- 2021-05-20  
+  [**백준 2675번 Node.js 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-2675%EB%B2%88-Node.js-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
