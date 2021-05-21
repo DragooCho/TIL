@@ -25,4 +25,4 @@ for (let i = 1; i <= N; i++) {
   }
 }
 
-console.log(count);
+console.log(count.join());

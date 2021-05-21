@@ -2,13 +2,14 @@ const fs = require("fs");
 const input = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
-    : `abcdefghijklmynopqrstuvwxyz`
+    : `aaaaaaaaaaaaaaaaaajjjdddddddddddddddddddddddddddddddddddddddddZ`
 ).trim();
 
 let alphCountArr = [];
 let maxCount = 0;
 let answer;
 let words = input.toUpperCase().split("");
+let overlapCount = 0;
 
 let a = "A".charCodeAt();
 let z = "Z".charCodeAt();
@@ -25,10 +26,9 @@ for (let i = a; i <= z; i++) {
       answer = String.fromCharCode(i);
     }
   }
-  alphCountArr += count;
+  alphCountArr.push(count);
 }
 
-let overlapCount = 0;
 let countArr = alphCountArr.indexOf(maxCount);
 while (countArr !== -1) {
   overlapCount++;
@@ -39,3 +39,7 @@ while (countArr !== -1) {
 }
 
 console.log(answer);
+
+// openAlphWord();
+// alphCountArr.push(count);
+// `aaaajjjdddd`에서 오류 발견

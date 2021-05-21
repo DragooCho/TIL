@@ -2,7 +2,7 @@ const fs = require("fs");
 const input = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
-    : `abcdefghijklmynopqrstuvwxyz`
+    : `aaaajjjdddd`
 ).trim();
 
 let alphCountArr = [];
@@ -25,17 +25,14 @@ for (let i = a; i <= z; i++) {
       answer = String.fromCharCode(i);
     }
   }
-  alphCountArr += count;
+  alphCountArr.push(count);
 }
 
-let overlapCount = 0;
-let countArr = alphCountArr.indexOf(maxCount);
-while (countArr !== -1) {
-  overlapCount++;
-  countArr = alphCountArr.indexOf(maxCount, countArr + 1);
-  if (overlapCount >= 2) {
-    answer = "?";
-  }
+let newArr = alphCountArr.sort((a, b) => b - a);
+let lastPos = newArr[0];
+let laftPos = newArr[1];
+if (lastPos === laftPos) {
+  answer = "?";
 }
 
 console.log(answer);
