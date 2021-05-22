@@ -3,7 +3,9 @@ const input = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
     : `baekjoon`
-).trim();
+)
+  .trim()
+  .split(" ");
 
 let answerArr = [];
 

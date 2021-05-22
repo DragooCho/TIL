@@ -1,28 +1,14 @@
 const fs = require("fs");
-const [n] = (
-  process.platform === "linux"
-    ? fs.readFileSync("/dev/stdin").toString()
-    : `1000
-`
+const [input] = (
+  process.platform === "linux" ? fs.readFileSync("/dev/stdin").toString() : ` `
 )
   .trim()
   .split("\n");
 
-let N = Number(n);
-let count = 0;
+let newArr = input.split(" ");
 
-for (let i = 1; i <= N; i++) {
-  let iArr = String(i);
-  if (i <= 99) {
-    count++;
-    continue;
-  }
-
-  let A = Number(iArr[0]) - Number(iArr[1]);
-  let B = Number(iArr[1]) - Number(iArr[2]);
-  if (A === B) {
-    count++;
-  }
+if (newArr[0] === "") {
+  newArr.pop();
 }
 
-console.log(count.join());
+console.log(newArr.length);
