@@ -10,13 +10,13 @@ const input = (
 let A = input[0].split("");
 let B = input[1].split("");
 
-// let sumA = Number(A.reverse().reduce((a, b) => a + b));
-// let sumB = Number(B.reverse().reduce((a, b) => a + b));
-
 let sumA = Number(A.reverse().join(""));
 let sumB = Number(B.reverse().join(""));
 
 console.log(Math.max(sumA, sumB));
+
+// let sumA = Number(A.reverse().reduce((a, b) => a + b));
+// let sumB = Number(B.reverse().reduce((a, b) => a + b));
 
 // let aTmp = A[0];
 // A[0] = A[2];
