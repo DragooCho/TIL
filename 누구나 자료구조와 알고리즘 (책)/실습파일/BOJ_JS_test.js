@@ -22,10 +22,16 @@
 // const n_arr = input.slice(1, n+1);
 // const [m, ...m_arr] = input.slice(n+1);
 
+// 배열 요구사항
+// JS의 Array를 이용해 길이 5 이상의 string 배열 만들기
+// JS의 Array를 이용해 기본적인 내장 함수(push, pop, shift, unshift, indexOf, splice, slice) 사용해보기
+// JS의 Array를 이용해 심화적인 내장 함수(map, filter, find, keys, concat, flat, entries, includes) 사용해보기
+
 const fs = require("fs");
-const [...arr] = (process.platform === "linux"
-  ? fs.readFileSync("/dev/stdin").toString()
-  : `5
+const [...arr] = (
+  process.platform === "linux"
+    ? fs.readFileSync("/dev/stdin").toString()
+    : `5
 OOXXOXXOOO
 OOXXOOXXOO
 OXOXOXOXOXOXOX
