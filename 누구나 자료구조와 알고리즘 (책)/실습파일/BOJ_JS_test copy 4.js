@@ -1,76 +1,33 @@
 const fs = require("fs");
-const input = (
+const [N, ...arr] = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
-    : `c=c=`
+    : `4
+aba
+abab
+abcabc
+a
+`
 )
   .trim()
-  .split("");
+  .split("\n");
 
-let croatiaWordCount = 0;
+let numWords = Number(N);
+let count = 0;
 
-for (let i = 0; i < input.length; i++) {
-  let liftWord = input[i - 1];
-  let nowWord = input[i];
-  let rightWord = input[i + 1];
-  let rrWord = input[i + 2];
+for (let i = 0; i < numWords; i++) {
+  let newArr = [];
+  let nowArr = arr[i];
 
-  if (nowWord === "c") {
-    if (rightWord === "=" || rightWord === "-") {
-      croatiaWordCount++;
-      i++;
-      continue;
+  for (let j = 0; j < nowArr.length; j++) {
+    if (newArr.indexOf(nowArr[j]) === -1 || nowArr[j - 1] === nowArr[j]) {
+      newArr += nowArr.slice(j, j + 1);
     }
   }
 
-  if (nowWord === "d") {
-    if (rightWord === "-") {
-      croatiaWordCount++;
-      i++;
-      continue;
-    }
-    if (rightWord === "z" && rrWord === "=") {
-      croatiaWordCount++;
-      i += 2;
-      continue;
-    }
+  if (newArr.length === nowArr.length) {
+    count++;
   }
-
-  if (nowWord === "l" || nowWord === "n") {
-    if (rightWord === "j") {
-      croatiaWordCount++;
-      i++;
-      continue;
-    }
-  }
-
-  if (nowWord === "s") {
-    if (rightWord === "=") {
-      croatiaWordCount++;
-      i++;
-      continue;
-    }
-  }
-
-  if (nowWord === "z") {
-    if (liftWord !== "d" && rightWord === "=") {
-      croatiaWordCount++;
-      i++;
-      continue;
-    }
-  }
-
-  croatiaWordCount++;
 }
 
-console.log(croatiaWordCount);
-
-// 변경
-// c=
-// c-
-// dz=
-// d-
-// lj
-// nj
-// s=
-// z=
+console.log(count);

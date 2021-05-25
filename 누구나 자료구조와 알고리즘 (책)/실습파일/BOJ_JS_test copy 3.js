@@ -2,63 +2,19 @@ const fs = require("fs");
 const input = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
-    : `c=c=`
-)
-  .trim()
-  .split("");
+    : `ljnj`
+).trim();
 
-let croatiaWordCount = 0;
+let croatia = ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="];
 
-for (let i = 0; i < input.length; i++) {
-  let nowWord = input[i];
-  let rightWord = input[i + 1];
-  let liftWord = input[i - 1];
-  let rrWord = input[i + 2];
-
-  if (nowWord === "c") {
-    if (rightWord === "=" || rightWord === "-") {
-      croatiaWordCount--;
-    }
+function solution(input) {
+  for (let alphabet of croatia) {
+    input = input.split(alphabet).join("Q");
   }
 
-  if (nowWord === "d") {
-    if (rightWord === "-") {
-      croatiaWordCount--;
-    }
-    if (rightWord === "z" && rrWord === "=") {
-      croatiaWordCount -= 2;
-    }
-  }
-
-  if (nowWord === "l" || nowWord === "n") {
-    if (rightWord === "j") {
-      croatiaWordCount--;
-    }
-  }
-
-  if (nowWord === "s") {
-    if (rightWord === "=") {
-      croatiaWordCount--;
-    }
-  }
-
-  if (nowWord === "z") {
-    if (liftWord !== "d" && rightWord === "=") {
-      croatiaWordCount--;
-    }
-  }
-
-  croatiaWordCount++;
+  return input;
 }
 
-console.log(croatiaWordCount);
+console.log(solution(input));
 
-// 변경
-// c=
-// c-
-// dz=
-// d-
-// lj
-// nj
-// s=
-// z=
+// console.log(croatia[1]);
