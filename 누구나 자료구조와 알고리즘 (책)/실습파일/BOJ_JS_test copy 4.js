@@ -3,10 +3,10 @@ const [N, ...arr] = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
     : `4
-aba
-abab
-abcabc
-a
+abbbbbb
+abaccccccccc
+abccctcccffff
+aaaaaja
 `
 )
   .trim()
@@ -20,8 +20,10 @@ for (let i = 0; i < numWords; i++) {
   let nowArr = arr[i];
 
   for (let j = 0; j < nowArr.length; j++) {
-    if (newArr.indexOf(nowArr[j]) === -1 || nowArr[j - 1] === nowArr[j]) {
+    if (newArr.includes(nowArr[j]) !== true || nowArr[j - 1] === nowArr[j]) {
       newArr += nowArr.slice(j, j + 1);
+    } else {
+      break;
     }
   }
 

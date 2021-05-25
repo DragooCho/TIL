@@ -206,3 +206,5 @@
 
 - 2021-05-25  
   [**백준 1316번 Node.js 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-1316%EB%B2%88-Node.js-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
+
+  [**백준 1712번 Node.js 문제풀이**](https://velog.io/@dragoocho/%EB%B0%B1%EC%A4%80-1712-%EB%B2%88-Node.js-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4)
