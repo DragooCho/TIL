@@ -31,12 +31,7 @@ const fs = require("fs");
 const [...arr] = (
   process.platform === "linux"
     ? fs.readFileSync("/dev/stdin").toString()
-    : `5
-OOXXOXXOOO
-OOXXOOXXOO
-OXOXOXOXOXOXOX
-OOOOOOOOOO
-OOOOXOOOOXOOOOX
+    : `58
 `
 )
   .trim()
@@ -45,15 +40,22 @@ OOOOXOOOOXOOOOX
 let nNumber = Number(arr[0]);
 let answer = "";
 
-for (let i = 1; i <= nNumber; i++) {
-  let count = 0;
-  let sum = 0;
+// for (let i = 1; i <= nNumber; i++) {
+//   let count = 0;
+//   let sum = 0;
 
-  for (let j = 0; j < arr[i].length; j++) {
-    arr[i][j] === "O" ? count++ : (count = 0);
-    sum += count;
-  }
-  answer += sum + "\n";
-}
+//   for (let j = 0; j < arr[i].length; j++) {
+//     arr[i][j] === "O" ? count++ : (count = 0);
+//     sum += count;
+//   }
+//   answer += sum + "\n";
+// }
 
-console.log(answer);
+// let A = 0;
+// let B = 0;
+
+// (6 + 1) * 1 + 1;
+
+// A = Math.pow(2, 3);
+
+console.log(A);
