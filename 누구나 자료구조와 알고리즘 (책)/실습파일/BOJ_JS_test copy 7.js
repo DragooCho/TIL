@@ -8,18 +8,10 @@ const input = (
   .split(" ");
 
 let up = Number(input[0]);
-let down = -Number(input[1]);
+let down = Number(input[1]);
 let totalMeter = Number(input[2]);
-let N = 0;
 let days = 0;
 
-while (N <= totalMeter) {
-  days++;
-  N += up;
-  if (N >= totalMeter) {
-    break;
-  }
-  N += down;
-}
+days = Math.ceil((totalMeter - down) / (up - down));
 
 console.log(days);
