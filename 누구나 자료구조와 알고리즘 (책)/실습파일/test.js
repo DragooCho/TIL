@@ -1,18 +1,2 @@
-const fs = require("fs");
-const [...arr] = (
-  process.platform === "linux" ? fs.readFileSync("/dev/stdin").toString() : `1`
-)
-  .trim()
-  .split(" ");
-
-let A = Number(arr[0]);
-let B = Number(arr[1]);
-let C = Number(arr[2]);
-
-let N = A / (C - B);
-
-let answer = Math.floor(N) + 1;
-
-// B >= C ? (answer = -1) : answer;
-
-console.log(answer);
+const { x, ...rest } = { x: 1, y: 2, z: 3 };
+console.log(x, rest); // 1 { y: 2, z: 3 }

@@ -1,31 +1,29 @@
 const fs = require("fs");
-const [n, ...arr] = (
-  process.platform === "linux"
-    ? fs.readFileSync("/dev/stdin").toString()
-    : `2
-6 12 10
-30 50 72`
+const input = (
+  process.platform === "linux" ? fs.readFileSync("/dev/stdin").toString() : `9`
 )
   .trim()
   .split("\n");
 
-let nArrNumber = Number(n);
-let newArr = arr.map((e) => e.split(" "));
-let nAnswer = "";
+let N = Number(input);
+let answer = 0;
+let remainder = 0;
 
-for (let i = 0; i < nArrNumber; i++) {
-  let H = newArr[i][0],
-    N = newArr[i][2];
-
-  let answerH = N % H;
-  if (answerH === 0) {
-    answerH = H;
+if (N % 5 === 0) {
+  answer = N / 5;
+} else if (N === 3) {
+  answer = 1;
+} else if (N === 4) {
+  answer = -1;
+} else {
+  remainder = N % 5;
+  if (remainder % 3 === 0) {
+    answer = Math.floor(N / 5) + 1;
+  } else if (N % 3 === 0) {
+    answer = N / 3;
+  } else {
+    answer = -1;
   }
-
-  let answerW = Math.ceil(N / H);
-  answerW < 10 ? (answerW = String(0) + answerW) : answerW;
-
-  nAnswer += `${answerH}${answerW}` + "\n";
 }
 
-console.log(nAnswer);
+console.log(answer);
