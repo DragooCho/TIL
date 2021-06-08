@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <button
+      class="randomDog"
+      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+    >
+      개 사진 생성버튼
+    </button>
+    <button
+      class="randomFox"
+      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+    >
+      여우 사진 생성버튼
+    </button>
+    <button
+      class="randomCat"
+      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+    >
+      고양이 사진 생성버튼
+    </button>
+    <!-- 버튼을 누르면 이미지겍체를 생성하고 해당 API의 이미지정보를 이미지겍체에 대입한후 div테그에 붙인다. -->
+  </body>
+  <script>
+    const start = () => {
+      const randomDogBtn = document.querySelector(".randomDog");
+      const randomFoxBtn = document.querySelector(".randomFox");
+      const randomCatBtn = document.querySelector(".randomCat");
+      const divTag = document.querySelector("div");
+      randomCatBtn.addEventListener("click", () => {
+        axios
+          .get("https://aws.random.cat/meow")
+          .then((response) => {
+            const image = new Image();
+            image.src = response.data.file;
+            divTag.appendChild(image);
+          })
+          .catch(function (error) {
+            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
+          });
+      });
+
+      randomDogBtn.addEventListener("click", () => {
+        axios
+          .get("https://random.dog/woof.json")
+          .then((response) => {
+            const image = new Image();
+            image.src = response.data.url;
+            divTag.appendChild(image);
+          })
+          .catch(function (error) {
+            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
+          });
+      });
+
+      randomFoxBtn.addEventListener("click", () => {
+        axios
+          .get("https://randomfox.ca/floof/")
+          .then((response) => {
+            const image = new Image();
+            image.src = response.data.image;
+            divTag.appendChild(image);
+          })
+          .catch(function (error) {
+            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
+          });
+      });
+    };
+
+    const init = () => {
+      start();
+    };
+
+    init();
+  </script>
+</html>
