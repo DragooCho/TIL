@@ -55,6 +55,7 @@
             const image = new Image();
             image.src = response.data.url;
             divTag.appendChild(image);
+            // console.log(auto instanceof image);
           })
           .catch(function (error) {
             divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";

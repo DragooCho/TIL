@@ -1,6 +1,13 @@
 const fs = require("fs");
 const input = (
-  process.platform === "linux" ? fs.readFileSync("/dev/stdin").toString() : `9`
+  process.platform === "linux"
+    ? fs.readFileSync("/dev/stdin").toString()
+    : `2
+  1
+  3
+  2
+  3
+  `
 )
   .trim()
   .split("\n");

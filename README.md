@@ -223,3 +223,9 @@
 
 - 2021-06-01  
   [**구조 분해 할당(destructuring)**](https://velog.io/@dragoocho/%EA%B5%AC%EC%A1%B0-%EB%B6%84%ED%95%B4-%ED%95%A0%EB%8B%B9destructuring)
+
+- 2021-06-14  
+  [**github 커밋할 때 인증 절차 생략하는 법**](https://velog.io/@dragoocho/github-%EC%BB%A4%EB%B0%8B%ED%95%A0-%EB%95%8C-%EC%9D%B8%EC%A6%9D-%EC%A0%88%EC%B0%A8-%EC%83%9D%EB%9E%B5%ED%95%98%EB%8A%94-%EB%B2%95)
+
+- 2021-06-15  
+  [**Vue.js 인프런 강의 - 섹션 5. '라우터 기본' 까지 진행**](https://velog.io/@dragoocho/Vue.js-%EC%9D%B8%ED%94%84%EB%9F%B0-%EA%B0%95%EC%9D%98-%EC%84%B9%EC%85%98-5.-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EA%B8%B0%EB%B3%B8-%EA%B9%8C%EC%A7%80-%EC%A7%84%ED%96%89)
