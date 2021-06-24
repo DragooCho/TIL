@@ -27,35 +27,14 @@
 // JS의 Array를 이용해 기본적인 내장 함수(push, pop, shift, unshift, indexOf, splice, slice) 사용해보기
 // JS의 Array를 이용해 심화적인 내장 함수(map, filter, find, keys, concat, flat, entries, includes) 사용해보기
 
-const fs = require("fs");
-const [...arr] = (
-  process.platform === "linux"
-    ? fs.readFileSync("/dev/stdin").toString()
-    : `58
-`
-)
-  .trim()
-  .split("\n");
+const v = [
+  [1, 1],
+  [2, 2],
+  [1, 2],
+]; //  [1, 10]
 
-let nNumber = Number(arr[0]);
-let answer = "";
+const Vtest = 1;
 
-// for (let i = 1; i <= nNumber; i++) {
-//   let count = 0;
-//   let sum = 0;
+const Vquad = Vtest || 0;
 
-//   for (let j = 0; j < arr[i].length; j++) {
-//     arr[i][j] === "O" ? count++ : (count = 0);
-//     sum += count;
-//   }
-//   answer += sum + "\n";
-// }
-
-// let A = 0;
-// let B = 0;
-
-// (6 + 1) * 1 + 1;
-
-// A = Math.pow(2, 3);
-
-console.log(A);
+console.log(Vquad);

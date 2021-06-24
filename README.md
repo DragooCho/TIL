@@ -238,3 +238,6 @@
   [**Vue.js 완벽 가이드 - 8. 중간정리 및 스타일링**](https://velog.io/@dragoocho/Vue.js-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-8.-%EC%A4%91%EA%B0%84%EC%A0%95%EB%A6%AC-%EB%B0%8F-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81)
 
   [**Vue.js 완벽 가이드 - 9. 라우터 실전**](https://velog.io/@dragoocho/%EC%84%B9%EC%85%98-9.-%EB%9D%BC%EC%9A%B0%ED%84%B0-%EC%8B%A4%EC%A0%84)
+
+- 2021-06-24  
+  [**섹션 10. 리팩토링 1 - 리스트 아이템 컴포넌트 공통화**](https://velog.io/@dragoocho/%EC%84%B9%EC%85%98-10.-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-1-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%95%84%EC%9D%B4%ED%85%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5%ED%99%94)
