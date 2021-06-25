@@ -241,3 +241,6 @@
 
 - 2021-06-24  
   [**섹션 10. 리팩토링 1 - 리스트 아이템 컴포넌트 공통화**](https://velog.io/@dragoocho/%EC%84%B9%EC%85%98-10.-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-1-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%95%84%EC%9D%B4%ED%85%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5%ED%99%94)
+
+- 2021-06-25  
+  [**섹션 11. 리팩토링 2 - 사용자 프로필 컴포넌트 공통화**](https://velog.io/@dragoocho/%EC%84%B9%EC%85%98-11.-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-2-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5%ED%99%94)
