@@ -11,68 +11,99 @@
     <div></div>
     <button
       class="randomDog"
-      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+      style="
+        color: rgb(12, 12, 12);
+        width: 200px;
+        height: 50px;
+        border-radius: 0.5rem;
+      "
     >
       개 사진 생성버튼
     </button>
     <button
       class="randomFox"
-      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+      style="
+        color: rgb(12, 12, 12);
+        width: 200px;
+        height: 50px;
+        border-radius: 0.5rem;
+      "
     >
       여우 사진 생성버튼
     </button>
     <button
       class="randomCat"
-      style="color: rgb(12, 12, 12); width: 200px; height: 50px"
+      style="
+        color: rgb(12, 12, 12);
+        width: 200px;
+        height: 50px;
+        border-radius: 0.5rem;
+      "
     >
       고양이 사진 생성버튼
     </button>
-    <!-- 버튼을 누르면 이미지겍체를 생성하고 해당 API의 이미지정보를 이미지겍체에 대입한후 div테그에 붙인다. -->
   </body>
   <script>
     const start = () => {
-      const randomDogBtn = document.querySelector(".randomDog");
-      const randomFoxBtn = document.querySelector(".randomFox");
-      const randomCatBtn = document.querySelector(".randomCat");
-      const divTag = document.querySelector("div");
-      randomCatBtn.addEventListener("click", () => {
+      const randomDogBtn = document.querySelector(".randomDog"),
+        randomFoxBtn = document.querySelector(".randomFox"),
+        randomCatBtn = document.querySelector(".randomCat"),
+        divTag = document.querySelector("div");
+
+      const configAnimals = {
+        catUrl: "https://aws.random.cat/meow",
+        dogUrl: "https://random.dog/woof.json",
+        foxUrl: "https://randomfox.ca/floof/",
+      };
+
+      const animalImageMaker = (Url) => {
         axios
-          .get("https://aws.random.cat/meow")
+          .get(Url)
           .then((response) => {
-            const image = new Image();
-            image.src = response.data.file;
+            let image = new Image(300);
+            switch (Url) {
+              case configAnimals.catUrl:
+                image.src = response.data.file;
+                break;
+
+              case configAnimals.dogUrl:
+                image.src = response.data.url;
+                const parseUrl = image.src.split(".");
+                const fileNameEx = parseUrl[parseUrl.length - 1];
+
+                if (fileNameEx === "mp4" || fileNameEx === "webm") {
+                  image = null;
+                  let newVideoTag = document.createElement("video");
+                  newVideoTag.setAttribute("src", response.data.url);
+                  newVideoTag.setAttribute("width", "300");
+                  newVideoTag.setAttribute("autoplay", "true");
+                  newVideoTag.setAttribute("loop", "true");
+                  image = newVideoTag;
+                }
+
+                break;
+
+              case configAnimals.foxUrl:
+                image.src = response.data.image;
+                break;
+            }
             divTag.appendChild(image);
           })
           .catch(function (error) {
-            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
+            divTag.innerHTML = error;
           });
+      };
+
+      randomCatBtn.addEventListener("click", () => {
+        animalImageMaker(configAnimals.catUrl);
       });
 
       randomDogBtn.addEventListener("click", () => {
-        axios
-          .get("https://random.dog/woof.json")
-          .then((response) => {
-            const image = new Image();
-            image.src = response.data.url;
-            divTag.appendChild(image);
-            // console.log(auto instanceof image);
-          })
-          .catch(function (error) {
-            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
-          });
+        animalImageMaker(configAnimals.dogUrl);
       });
 
       randomFoxBtn.addEventListener("click", () => {
-        axios
-          .get("https://randomfox.ca/floof/")
-          .then((response) => {
-            const image = new Image();
-            image.src = response.data.image;
-            divTag.appendChild(image);
-          })
-          .catch(function (error) {
-            divTag.innerHTML = "일시적인 오류로 사진을 불러오지 못했습니다.";
-          });
+        animalImageMaker(configAnimals.foxUrl);
       });
     };
 
