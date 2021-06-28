@@ -7,48 +7,51 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
   </head>
-  <body>
-    <div></div>
-    <button
-      class="randomDog"
-      style="
-        color: rgb(12, 12, 12);
-        width: 200px;
-        height: 50px;
-        border-radius: 0.5rem;
-      "
-    >
-      개 사진 생성버튼
-    </button>
-    <button
-      class="randomFox"
-      style="
-        color: rgb(12, 12, 12);
-        width: 200px;
-        height: 50px;
-        border-radius: 0.5rem;
-      "
-    >
-      여우 사진 생성버튼
-    </button>
-    <button
-      class="randomCat"
-      style="
-        color: rgb(12, 12, 12);
-        width: 200px;
-        height: 50px;
-        border-radius: 0.5rem;
-      "
-    >
-      고양이 사진 생성버튼
-    </button>
+  <body style="display: flex; justify-content: center">
+    <div class="button_container" style="position: fixed">
+      <button
+        class="randomDog"
+        style="
+          color: rgb(12, 12, 12);
+          width: 200px;
+          height: 50px;
+          border-radius: 0.5rem;
+        "
+      >
+        개 사진 생성버튼
+      </button>
+      <button
+        class="randomFox"
+        style="
+          color: rgb(12, 12, 12);
+          width: 200px;
+          height: 50px;
+          border-radius: 0.5rem;
+        "
+      >
+        여우 사진 생성버튼
+      </button>
+      <button
+        class="randomCat"
+        style="
+          color: rgb(12, 12, 12);
+          width: 200px;
+          height: 50px;
+          border-radius: 0.5rem;
+        "
+      >
+        고양이 사진 생성버튼
+      </button>
+    </div>
+    <div class="image_posted"></div>
   </body>
+
   <script>
     const start = () => {
       const randomDogBtn = document.querySelector(".randomDog"),
         randomFoxBtn = document.querySelector(".randomFox"),
         randomCatBtn = document.querySelector(".randomCat"),
-        divTag = document.querySelector("div");
+        imagePostedZone = document.querySelector(".image_posted");
 
       const configAnimals = {
         catUrl: "https://aws.random.cat/meow",
@@ -56,54 +59,68 @@
         foxUrl: "https://randomfox.ca/floof/",
       };
 
-      const animalImageMaker = (Url) => {
+      const urlParseEx = (img) => {
+        const parseUrl = img.split(".");
+        const nameExValue = parseUrl[parseUrl.length - 1];
+        return nameExValue;
+      };
+
+      const createdVideoOBJ = (image, dataUrl) => {
+        image = null;
+        let newVideoTag = document.createElement("video");
+        newVideoTag.setAttribute("src", dataUrl);
+        newVideoTag.setAttribute("width", "300");
+        newVideoTag.setAttribute("autoplay", "true");
+        newVideoTag.setAttribute("loop", "true");
+        image = newVideoTag;
+        return image;
+      };
+
+      function clickScrollDown() {
+        window.scrollBy(0, window.innerHeight);
+      }
+
+      const randomImageMaker = (URL) => {
         axios
-          .get(Url)
+          .get(URL)
           .then((response) => {
             let image = new Image(300);
-            switch (Url) {
+            switch (URL) {
               case configAnimals.catUrl:
                 image.src = response.data.file;
                 break;
 
               case configAnimals.dogUrl:
                 image.src = response.data.url;
-                const parseUrl = image.src.split(".");
-                const fileNameEx = parseUrl[parseUrl.length - 1];
+                let fileNameEx = urlParseEx(image.src);
 
                 if (fileNameEx === "mp4" || fileNameEx === "webm") {
-                  image = null;
-                  let newVideoTag = document.createElement("video");
-                  newVideoTag.setAttribute("src", response.data.url);
-                  newVideoTag.setAttribute("width", "300");
-                  newVideoTag.setAttribute("autoplay", "true");
-                  newVideoTag.setAttribute("loop", "true");
-                  image = newVideoTag;
+                  image = createdVideoOBJ(image, response.data.url);
                 }
-
                 break;
 
               case configAnimals.foxUrl:
                 image.src = response.data.image;
                 break;
             }
-            divTag.appendChild(image);
+            imagePostedZone.appendChild(image);
           })
           .catch(function (error) {
-            divTag.innerHTML = error;
+            imagePostedZone.innerHTML = error;
           });
+        clickScrollDown();
       };
 
       randomCatBtn.addEventListener("click", () => {
-        animalImageMaker(configAnimals.catUrl);
+        randomImageMaker(configAnimals.catUrl);
       });
 
       randomDogBtn.addEventListener("click", () => {
-        animalImageMaker(configAnimals.dogUrl);
+        randomImageMaker(configAnimals.dogUrl);
       });
 
       randomFoxBtn.addEventListener("click", () => {
-        animalImageMaker(configAnimals.foxUrl);
+        randomImageMaker(configAnimals.foxUrl);
       });
     };
 
