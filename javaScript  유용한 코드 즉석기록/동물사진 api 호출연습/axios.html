@@ -13,9 +13,10 @@
         class="randomDog"
         style="
           color: rgb(12, 12, 12);
-          width: 200px;
-          height: 50px;
+          width: 250px;
+          height: 90px;
           border-radius: 0.5rem;
+          font-size: 1.5rem;
         "
       >
         개 사진 생성버튼
@@ -24,9 +25,10 @@
         class="randomFox"
         style="
           color: rgb(12, 12, 12);
-          width: 200px;
-          height: 50px;
+          width: 250px;
+          height: 90px;
           border-radius: 0.5rem;
+          font-size: 1.5rem;
         "
       >
         여우 사진 생성버튼
@@ -35,12 +37,25 @@
         class="randomCat"
         style="
           color: rgb(12, 12, 12);
-          width: 200px;
-          height: 50px;
+          width: 250px;
+          height: 90px;
           border-radius: 0.5rem;
+          font-size: 1.5rem;
         "
       >
         고양이 사진 생성버튼
+      </button>
+      <button
+        class="randomRabbit"
+        style="
+          color: rgb(12, 12, 12);
+          width: 250px;
+          height: 90px;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+        "
+      >
+        토끼 사진 생성버튼
       </button>
     </div>
     <div
@@ -54,12 +69,14 @@
       const randomDogBtn = document.querySelector(".randomDog"),
         randomFoxBtn = document.querySelector(".randomFox"),
         randomCatBtn = document.querySelector(".randomCat"),
+        randomRabbitBtn = document.querySelector(".randomRabbit"),
         imagePostedZone = document.querySelector(".image_posted");
 
       const configAnimals = {
         catUrl: "https://aws.random.cat/meow",
         dogUrl: "https://random.dog/woof.json",
         foxUrl: "https://randomfox.ca/floof/",
+        rabbitUrl: "https://source.unsplash.com/featured/?Rabbit",
       };
 
       const urlParseEx = (img) => {
@@ -80,7 +97,7 @@
       };
 
       function clickScrollDown() {
-        window.scrollBy(0, window.innerHeight);
+        window.scrollBy(0, 1000);
       }
 
       const randomImageMaker = (URL) => {
@@ -105,6 +122,11 @@
               case configAnimals.foxUrl:
                 image.src = response.data.image;
                 break;
+
+              case configAnimals.rabbitUrl:
+                image.src = URL;
+                console.log(URL);
+                break;
             }
             imagePostedZone.appendChild(image);
           })
@@ -124,6 +146,10 @@
 
       randomFoxBtn.addEventListener("click", () => {
         randomImageMaker(configAnimals.foxUrl);
+      });
+
+      randomRabbitBtn.addEventListener("click", () => {
+        randomImageMaker(configAnimals.rabbitUrl);
       });
     };
 
