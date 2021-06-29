@@ -7,62 +7,42 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
   </head>
-  <body style="display: flex; justify-content: center">
-    <div class="button_container" style="position: fixed; z-index: 1">
-      <button
-        class="randomDog"
-        style="
-          color: rgb(12, 12, 12);
-          width: 250px;
-          height: 90px;
-          border-radius: 0.5rem;
-          font-size: 1.5rem;
-        "
-      >
-        개 사진 생성버튼
-      </button>
-      <button
-        class="randomFox"
-        style="
-          color: rgb(12, 12, 12);
-          width: 250px;
-          height: 90px;
-          border-radius: 0.5rem;
-          font-size: 1.5rem;
-        "
-      >
-        여우 사진 생성버튼
-      </button>
-      <button
-        class="randomCat"
-        style="
-          color: rgb(12, 12, 12);
-          width: 250px;
-          height: 90px;
-          border-radius: 0.5rem;
-          font-size: 1.5rem;
-        "
-      >
-        고양이 사진 생성버튼
-      </button>
-      <button
-        class="randomRabbit"
-        style="
-          color: rgb(12, 12, 12);
-          width: 250px;
-          height: 90px;
-          border-radius: 0.5rem;
-          font-size: 1.5rem;
-        "
-      >
-        토끼 사진 생성버튼
-      </button>
+
+  <body>
+    <div class="button_container">
+      <button class="randomDog btnStyle">개 사진 생성버튼</button>
+      <button class="randomFox btnStyle">여우 사진 생성버튼</button>
+      <button class="randomCat btnStyle">고양이 사진 생성버튼</button>
+      <button class="randomRabbit btnStyle">토끼 사진 생성버튼</button>
     </div>
-    <div
-      class="image_posted"
-      style="position: relative; top: 100px; z-index: 0"
-    ></div>
+    <div class="image_posted"></div>
   </body>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button_container {
+      position: fixed;
+      z-index: 1;
+    }
+
+    .btnStyle {
+      color: rgb(12, 12, 12);
+      width: 250px;
+      height: 90px;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .image_posted {
+      position: relative;
+      top: 100px;
+      z-index: 0;
+    }
+  </style>
 
   <script>
     const start = () => {
@@ -88,11 +68,13 @@
       const createdVideoOBJ = (image, dataUrl) => {
         image = null;
         let newVideoTag = document.createElement("video");
+
         newVideoTag.setAttribute("src", dataUrl);
         newVideoTag.setAttribute("width", "300");
         newVideoTag.setAttribute("autoplay", "true");
         newVideoTag.setAttribute("loop", "true");
         image = newVideoTag;
+
         return image;
       };
 
@@ -113,7 +95,6 @@
               case configAnimals.dogUrl:
                 image.src = response.data.url;
                 let fileNameEx = urlParseEx(image.src);
-
                 if (fileNameEx === "mp4" || fileNameEx === "webm") {
                   image = createdVideoOBJ(image, response.data.url);
                 }
@@ -125,12 +106,11 @@
 
               case configAnimals.rabbitUrl:
                 image.src = URL;
-                console.log(URL);
                 break;
             }
             imagePostedZone.appendChild(image);
           })
-          .catch(function (error) {
+          .catch((error) => {
             imagePostedZone.innerHTML = error;
           });
         clickScrollDown();
