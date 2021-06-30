@@ -27,14 +27,25 @@
 // JS의 Array를 이용해 기본적인 내장 함수(push, pop, shift, unshift, indexOf, splice, slice) 사용해보기
 // JS의 Array를 이용해 심화적인 내장 함수(map, filter, find, keys, concat, flat, entries, includes) 사용해보기
 
-const v = [
-  [1, 1],
-  [2, 2],
-  [1, 2],
-]; //  [1, 10]
+const participant = ["ana2", "ana", "ana", "ana"];
+const completion = ["ana2", "ana", "ana"];
 
-const Vtest = 1;
+function solution(participant, completion) {
+  let answer = "";
+  let arrPart = participant.sort();
 
-const Vquad = Vtest || 0;
+  for (let i = 0; i < arrPart.length; i++) {
+    if (completion.indexOf(arrPart[i]) === -1) {
+      answer = arrPart[i];
+    }
+    if (arrPart[i] === arrPart[i + 1]) {
+      answer = arrPart[i];
+    }
+  }
 
-console.log(Vquad);
+  return console.log(answer);
+}
+
+solution(participant, completion);
+
+// console.log(participant.sort());

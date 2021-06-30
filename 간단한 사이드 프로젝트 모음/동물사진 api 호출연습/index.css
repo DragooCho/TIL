@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.button_container {
+  position: fixed;
+  z-index: 1;
+}
+
+.btnStyle {
+  color: rgb(12, 12, 12);
+  width: 250px;
+  height: 90px;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.image_posted {
+  position: relative;
+  top: 100px;
+  z-index: 0;
+}

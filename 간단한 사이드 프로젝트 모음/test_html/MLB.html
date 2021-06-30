@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body style="display: flex; justify-content: center">
+    <div class="button_container" style="position: fixed; z-index: 1">
+      <button
+        class="randomDog"
+        style="
+          color: rgb(12, 12, 12);
+          width: 250px;
+          height: 90px;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+        "
+      >
+        생성버튼
+      </button>
+    </div>
+    <div
+      class="image_posted"
+      style="position: relative; top: 100px; z-index: 0"
+    ></div>
+  </body>
+
+  <script>
+    const randomDogBtn = document.querySelector(".randomDog"),
+      imagePostedZone = document.querySelector(".image_posted");
+
+    const configAnimals = {
+      dogUrl: "https://random.dog/woof.json",
+    };
+
+    const urlParseEx = (img) => {
+      const parseUrl = img.split(".");
+      const nameExValue = parseUrl[parseUrl.length - 1];
+      return nameExValue;
+    };
+
+    const createdVideoOBJ = (image, dataUrl) => {
+      image = null;
+      let newVideoTag = document.createElement("video");
+      newVideoTag.setAttribute("src", dataUrl);
+      newVideoTag.setAttribute("width", "300");
+      newVideoTag.setAttribute("autoplay", "true");
+      newVideoTag.setAttribute("loop", "true");
+      image = newVideoTag;
+      return image;
+    };
+
+    function clickScrollDown() {
+      window.scrollBy(0, 1000);
+    }
+
+    const randomImageMaker = () => {
+      let image = new Image(300);
+      const options = {
+        method: "GET",
+        url: "https://api-baseball.p.rapidapi.com/countries",
+        headers: {
+          "x-rapidapi-key":
+            "1f619908f1msh6ac66328231572ap13ddc2jsnf70d184d2364",
+          "x-rapidapi-host": "api-baseball.p.rapidapi.com",
+        },
+      };
+
+      axios
+        .request(options)
+        .then(function (response) {
+          image.src = response.data.response[5].flag;
+          //   console.log(response.data.response[0].logo);
+          imagePostedZone.appendChild(image);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      clickScrollDown();
+    };
+
+    randomDogBtn.addEventListener("click", randomImageMaker);
+  </script>
+</html>
