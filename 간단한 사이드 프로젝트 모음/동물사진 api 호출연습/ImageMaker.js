@@ -2,12 +2,15 @@ const randomImageMaker = (URL) => {
   axios
     .get(URL)
     .then((response) => {
-      let image = new Image(300);
+      let image = new Image(imgWidthValue);
       image = pushingSwitchingUrl(image, response, URL);
       imagePostedZone.appendChild(image);
     })
     .catch((error) => {
       imagePostedZone.innerHTML = error;
     });
-  normalScrollDown(1500);
+  normalScrollDown(scrollDownValue);
 };
+
+const scrollDownValue = 1500;
+const imgWidthValue = 300;

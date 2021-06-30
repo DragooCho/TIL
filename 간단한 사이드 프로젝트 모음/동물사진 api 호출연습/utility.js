@@ -17,8 +17,8 @@ const createdVideoOBJ = (image, dataUrl) => {
   return image;
 };
 
-const normalScrollDown = (ScrollDownValue) => {
-  window.scrollBy(0, ScrollDownValue);
+const normalScrollDown = (value) => {
+  window.scrollBy(0, value);
 };
 
 const pushingSwitchingUrl = (image, response, URL) => {
