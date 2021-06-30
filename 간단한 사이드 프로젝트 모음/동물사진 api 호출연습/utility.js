@@ -17,6 +17,32 @@ const createdVideoOBJ = (image, dataUrl) => {
   return image;
 };
 
-function clickScrollDown() {
-  window.scrollBy(0, 1000);
-}
+const normalScrollDown = (ScrollDownValue) => {
+  window.scrollBy(0, ScrollDownValue);
+};
+
+const pushingSwitchingUrl = (image, response, URL) => {
+  switch (URL) {
+    case configAnimals.catUrl:
+      image.src = response.data.file;
+      break;
+
+    case configAnimals.dogUrl:
+      image.src = response.data.url;
+      let fileNameEx = urlParseEx(image.src);
+      if (fileNameEx === "mp4" || fileNameEx === "webm") {
+        image = createdVideoOBJ(image, response.data.url);
+      }
+      break;
+
+    case configAnimals.foxUrl:
+      image.src = response.data.image;
+      break;
+
+    case configAnimals.rabbitUrl:
+      image.src = URL;
+      break;
+  }
+
+  return image;
+};
