@@ -17,6 +17,7 @@ const createdVideoOBJ = (image, dataUrl) => {
   return image;
 };
 
+<<<<<<< HEAD
 const normalScrollDown = (value) => {
   window.scrollBy(0, value);
 };
@@ -46,3 +47,8 @@ const pushingSwitchingUrl = (image, response, URL) => {
 
   return image;
 };
+=======
+function clickScrollDown() {
+  window.scrollBy(0, 1000);
+}
+>>>>>>> parent of 547f08a... 동물사진 api 호출연습 -함수 코드정리
