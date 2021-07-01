@@ -12,5 +12,5 @@ const randomImageMaker = (URL) => {
   normalScrollDown(scrollDownValue);
 };
 
-const scrollDownValue = 1500;
+const scrollDownValue = 1400;
 const imgWidthValue = 300;
