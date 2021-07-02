@@ -65,27 +65,30 @@
     const randomImageMaker = () => {
       let image = new Image(200);
 
-      $.ajax({
-        method: "get",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "미움받을 용기" },
-        headers: { Authorization: "KakaoAK 8991f45a5116ec0059da6ef479c6f01c" },
-      }).done((res) => {
-        image.src = res.documents[0].thumbnail;
-        imagePostedZone.appendChild(image);
+      axios
+        .get("https://dapi.kakao.com/v3/search/book?target=title", {
+          params: { query: "미움받을 용기" },
+          headers: {
+            Authorization: "KakaoAK 8991f45a5116ec0059da6ef479c6f01c",
+          },
+        })
+        .then((res) => {
+          const bookInfo = res.data.documents[0];
+          image.src = bookInfo.thumbnail;
+          imagePostedZone.appendChild(image);
 
-        let newTextTag3 = document.createElement("h3");
-        let newTitleText = document.createTextNode(res.documents[0].title);
-        newTextTag3.appendChild(newTitleText);
-        imagePostedZone.appendChild(newTextTag3);
+          let newTextTag3 = document.createElement("h3");
+          let newTitleText = document.createTextNode(bookInfo.title);
+          newTextTag3.appendChild(newTitleText);
+          imagePostedZone.appendChild(newTextTag3);
 
-        console.log(res.documents[0].title);
-        console.log(res.documents[0].thumbnail);
-        console.log(res.documents[0].authors[0], res.documents[0].authors[1]);
-        console.log(res.documents[0].contents);
-        console.log("정가", res.documents[0].price, "원");
-        console.log("세일가격", res.documents[0].sale_price, "원");
-      });
+          console.log(bookInfo.title);
+          console.log(bookInfo.thumbnail);
+          console.log(bookInfo.authors[0], bookInfo.authors[1]);
+          console.log(bookInfo.contents);
+          console.log("정가", bookInfo.price, "원");
+          console.log("세일가격", bookInfo.sale_price, "원");
+        });
 
       clickScrollDown();
     };
