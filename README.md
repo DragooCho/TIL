@@ -221,6 +221,10 @@
 </div>
 </details>
 
+<details>
+<summary>2021/06</summary>
+<div markdown="1">
+
 - 2021-06-01  
   [**구조 분해 할당(destructuring)**](https://velog.io/@dragoocho/%EA%B5%AC%EC%A1%B0-%EB%B6%84%ED%95%B4-%ED%95%A0%EB%8B%B9destructuring)
 
@@ -244,3 +248,9 @@
 
 - 2021-06-25  
   [**섹션 11. 리팩토링 2 - 사용자 프로필 컴포넌트 공통화**](https://velog.io/@dragoocho/%EC%84%B9%EC%85%98-11.-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81-2-%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5%ED%99%94)
+
+</div>
+</details>
+
+- 2021-07-03
+  [**Vue.js 에서 환경변수 설정하기**](https://velog.io/@dragoocho/Vue.js-%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
