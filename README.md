@@ -83,8 +83,6 @@
   [**나의 블로그 웹주소**]
   (https://velog.io/@dragoocho)
 
-  <br />
-
 <details>
 <summary>2021/04 ~ 2021/05</summary>
 <div markdown="1">
