@@ -29,9 +29,34 @@
     </div>
     <div
       class="image_posted"
-      style="position: relative; top: 100px; z-index: 0"
+      style="
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+
+        z-index: 0;
+      "
     ></div>
   </body>
+
+  <style>
+    .imgCompo {
+      margin-bottom: 2rem;
+      border: 2px solid black;
+      border-radius: 2rem;
+    }
+
+    .imgCompo img {
+      border-radius: 1.8rem 1.8rem 0 0;
+    }
+
+    .imgCompo p {
+      text-align: center;
+      margin-top: 0.2rem;
+    }
+  </style>
 
   <script>
     const randomDogBtn = document.querySelector(".randomDog"),
@@ -63,32 +88,25 @@
     }
 
     const randomImageMaker = () => {
-      let image = new Image(200);
+      let image = new Image(400);
 
-      axios
-        .get("https://dapi.kakao.com/v3/search/book?target=title", {
-          params: { query: "미움받을 용기" },
-          headers: {
-            Authorization: `KakaoAK 8991f45a5116ec0059da6ef479c6f01c`,
-          },
-        })
-        .then((res) => {
-          const bookInfo = res.data.documents[0];
-          image.src = bookInfo.thumbnail;
-          imagePostedZone.appendChild(image);
+      axios.get("https://yesno.wtf/api").then((res) => {
+        let parDivTag = document.createElement("div");
+        parDivTag.setAttribute("class", "imgCompo");
+        imagePostedZone.appendChild(parDivTag);
 
-          let newTextTag3 = document.createElement("h3");
-          let newTitleText = document.createTextNode(bookInfo.title);
-          newTextTag3.appendChild(newTitleText);
-          imagePostedZone.appendChild(newTextTag3);
+        const imgCompo = document.querySelector(".imgCompo");
 
-          console.log(bookInfo.title);
-          console.log(bookInfo.thumbnail);
-          console.log(bookInfo.authors[0], bookInfo.authors[1]);
-          console.log(bookInfo.contents);
-          console.log("정가", bookInfo.price, "원");
-          console.log("세일가격", bookInfo.sale_price, "원");
-        });
+        image.src = res.data.image;
+        parDivTag.appendChild(image);
+
+        let newTextTag = document.createElement("p");
+        let answerText = document.createTextNode(res.data.answer);
+        newTextTag.appendChild(answerText);
+        parDivTag.appendChild(newTextTag);
+
+        console.log(res.data);
+      });
 
       clickScrollDown();
     };
