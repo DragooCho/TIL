@@ -24,28 +24,30 @@
 
 // 배열 요구사항
 // JS의 Array를 이용해 길이 5 이상의 string 배열 만들기
-// JS의 Array를 이용해 기본적인 내장 함수(push, pop, shift, unshift, indexOf, splice, slice) 사용해보기
-// JS의 Array를 이용해 심화적인 내장 함수(map, filter, find, keys, concat, flat, entries, includes) 사용해보기
+// JS의 Array를 이용해 기본적인 내장 함수(push, pop, shift, unshift, indexOf, splice, slice)
+// JS의 Array를 이용해 심화적인 내장 함수(map, filter, find, keys, concat, flat, entries, includes)
+// Math for forEach toLowerCase() / toUpperCase() split()
+const rectangles = [
+  [1, 1, 6, 5],
+  [2, 0, 4, 2],
+  [2, 4, 5, 7],
+  [4, 3, 8, 6],
+  [7, 5, 9, 7],
+]; // 테스트케이스를 기입하는 곳
 
-const participant = ["ana2", "ana", "ana", "ana"];
-const completion = ["ana2", "ana", "ana"];
-
-function solution(participant, completion) {
-  let answer = "";
-  let arrPart = participant.sort();
-
-  for (let i = 0; i < arrPart.length; i++) {
-    if (completion.indexOf(arrPart[i]) === -1) {
-      answer = arrPart[i];
-    }
-    if (arrPart[i] === arrPart[i + 1]) {
-      answer = arrPart[i];
-    }
+function solution(rectangles) {
+  const [x1, y1, x2, y2] = 0;
+  var resSum = 0;
+  var newArr = [];
+  for (var i = 0; i < rectangles.length; i++) {
+    [x1, y1, x2, y2] = rectangles[i];
+    const sum = (x2 - x1) * (y2 - y1);
+    resSum += sum;
+    newArr.push([x1, y1, x2, y2]);
   }
-
-  return console.log(answer);
+  var answer = resSum;
+  console.log(answer);
+  console.log(newArr[2].x2);
 }
 
-solution(participant, completion);
-
-// console.log(participant.sort());
+solution(rectangles);

@@ -255,3 +255,6 @@
 
 - 2021-07-04  
   [**(Vue.js) 이미지URL이 없어 출력되지 않을 때 대체이미지를 쓰는 팁**](https://velog.io/@dragoocho/Vue.js-img%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B0%80-%EC%B6%9C%EB%A0%A5%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C-%EB%8C%80%EC%B2%B4%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%93%B0%EB%8A%94-%ED%8C%81)
+
+- 2021-07-20  
+  [**(Vue.js) 버튼이벤트를 통해 새로운 이미지를 생성하는 법**](https://velog.io/@dragoocho/Vue.js-%EB%B2%84%ED%8A%BC%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%ED%86%B5%ED%95%B4-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A5%BC-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EB%B2%95)
