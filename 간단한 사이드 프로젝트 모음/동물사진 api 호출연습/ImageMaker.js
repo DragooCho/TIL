@@ -1,5 +1,6 @@
 const scrollDownValue = 1400;
 const imgWidthValue = 300;
+
 const pTegNumVal = 0;
 
 const randomImageMaker = (URL) => {
