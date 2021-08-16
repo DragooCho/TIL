@@ -7,7 +7,9 @@ const randomImageMaker = (URL) => {
       imagePostedZone.appendChild(image);
     })
     .catch((error) => {
-      imagePostedZone.innerHTML = error;
+      const errorMessage =
+        error.message + ": " + "현재 서버에서 불러오지 못했습니다.";
+      imagePostedZone.appendChild(errorMessage);
     });
   normalScrollDown(scrollDownValue);
 };
