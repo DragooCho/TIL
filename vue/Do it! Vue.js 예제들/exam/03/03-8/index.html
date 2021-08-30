@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Props Sample</title>
   </head>
   <body>
@@ -13,16 +13,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
-      Vue.component('child-component', {
-        props: ['propsdata'],
-        template: '<p>{{ propsdata }}</p>',
+      Vue.component("child-component", {
+        props: ["propsdata"],
+        template: "<p>{{ propsdata }}</p>",
       });
 
       new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-          message: 'Hello Vue! passed from Parent Component'
-        }
+          message: "Hello Vue! passed from Parent Component",
+        },
       });
     </script>
   </body>

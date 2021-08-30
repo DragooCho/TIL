@@ -4,6 +4,7 @@
   </head>
   <body>
     <div id="app">{{ message }}</div>
+    <button id="app2">바꾸기</button>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
@@ -24,6 +25,9 @@
         },
         updated: function () {
           console.log("updated");
+        },
+        destroyed: function () {
+          console.log("destroyed");
         },
       });
     </script>
