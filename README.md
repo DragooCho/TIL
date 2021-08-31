@@ -268,3 +268,8 @@
 
 - 2021-08-20  
   [**유용하게 자주 쓸 것 같은 함수모음 1**](https://velog.io/@dragoocho/%EC%9C%A0%EC%9A%A9%ED%95%98%EA%B2%8C-%EC%9E%90%EC%A3%BC-%EC%93%B8-%EA%B2%83-%EA%B0%99%EC%9D%80-%ED%95%A8%EC%88%98%EB%AA%A8%EC%9D%8C-1)
+
+- 2021-08-30  
+  [**[ES6] var, const, let의 특성**](https://velog.io/@dragoocho/var-const-let%EC%9D%98-%ED%8A%B9%EC%84%B1)
+
+
