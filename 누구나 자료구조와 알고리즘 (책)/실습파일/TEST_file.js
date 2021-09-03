@@ -1,19 +1,13 @@
-// const starOutput = () => {
-//   for (let i = 1; i < 5; i++) {
-//     let star = "";
-//     for (let j = 0; j < i; j++) {
-//       star = star + "*";
-//     }
-//     console.log(star);
-//   }
-// };
+fetch("http://shibe.online/api/shibes?count=3/")
+  .then((response) => {
+    console.log(response);
+    return response.json();
+  })
+  .then((json) => console.log(json))
+  .catch((e) => console.log(`✔${e}`));
 
-const currentDate = () => {
-  let currentTime = new Date();
-  let year = currentTime.getUTCFullYear();
-  let month = currentTime.getMonth();
-  let day = currentTime.getDate();
-  return `${year}. ${month + 1}. ${day}`;
-};
-
-console.log(currentDate());
+fetch("https://randomfox.ca/floof/")
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((e) => console.log(`✔${e}`));
