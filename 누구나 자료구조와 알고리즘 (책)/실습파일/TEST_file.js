@@ -1,13 +1,12 @@
-fetch("http://shibe.online/api/shibes?count=3/")
-  .then((response) => {
-    console.log(response);
-    return response.json();
-  })
-  .then((json) => console.log(json))
-  .catch((e) => console.log(`✔${e}`));
+const getFoxPhoto = async () => {
+  try {
+    const response = await fetch("https://randomfox.ca/floof/");
+    console.log(response.type);
+    console.log(response.url);
+    console.log(response.status);
+  } catch (error) {
+    (error) => console.log(`✔${error}`);
+  }
+};
 
-fetch("https://randomfox.ca/floof/")
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((e) => console.log(`✔${e}`));
+getFoxPhoto();

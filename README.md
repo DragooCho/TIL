@@ -281,3 +281,6 @@
 
 - 2021-09-03  
   [**[ES6] PROMISES**](https://velog.io/@dragoocho/PROMISES)
+
+- 2021-09-05  
+  [**[ES6] Async/Await**](https://velog.io/@dragoocho/ES6-AsyncAwait)
