@@ -12,6 +12,6 @@ function solution(N) {
   return answer;
 }
 
-console.log(solution(5));
+console.log(solution(10));
 
 // 단순 배열요소들끼리 합산한 결과를 원하는거면 forEach()가 더 간단하다.
