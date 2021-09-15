@@ -10,6 +10,6 @@ function solution(a, b, c) {
   return answer;
 }
 
-console.log(solution(13, 20, 17));
+console.log(solution(20, 20, 20));
 
 // 크거나 같다고 해야 해결된다.

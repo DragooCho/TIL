@@ -499,8 +499,8 @@ arr.forEach(x => {
 ```jsx
 Math.abs() : 절대값을 반환
 Math.cbrt() : 세제곱근을 반환
-Math.ceil() : 크거나 같은 수 중 가장 작은 정수를 반환
-Math.floor() : 작거나 같은 수 중 가장 큰 정수를 반환
+Math.ceil() : 크거나 같은 수 중 가장 작은 정수를 반환 (반올림)
+Math.floor() : 작거나 같은 수 중 가장 큰 정수를 반환 (반내림)
 
 Math.max() : 가장 큰 수를 반환
 Math.min() : 가장 작은 수를 반환
