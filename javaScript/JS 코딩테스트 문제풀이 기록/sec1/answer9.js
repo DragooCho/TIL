@@ -15,18 +15,18 @@ function solution(s) {
 
   let answer = "";
 
-  for (let i of s) {
-    if (i === "A") {
-      answer += "#";
-    } else {
-      answer += i;
-    }
-  }
+  // for (let i of s) {
+  //   if (i === "A") {
+  //     answer += "#";
+  //   } else {
+  //     answer += i;
+  //   }
+  // }
   // forEach문은 배열에 적용 가능하지만 문자열에서는 쓸 수없다.
 
   //////////////////////////////////////////////////////////////
 
-  // s.replace(' ', 'monkey')
+  answer = s.replace("A", "#");
 
   return answer;
 }
