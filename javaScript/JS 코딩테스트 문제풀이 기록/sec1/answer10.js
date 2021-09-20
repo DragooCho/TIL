@@ -9,5 +9,5 @@ function solution(s, r) {
 }
 
 let str = "COMPUTERPROGRAMMING";
-let findAfa = "R";
+let findAfa = "r";
 console.log(solution(str, findAfa));
