@@ -1,24 +1,20 @@
-function solution(N) {
-  const arr1 = Array.from({ length: N + 1 }, (v, i) => i);
+function solution(arr) {
+  let answer = 0;
+  let add = 0;
 
-  // const answer = arr.reduce((acc, cur, index, array) => {
-  //   return acc + cur;
-  // }, 0);
+  arr.forEach((e) => {
+    // if (e === 1) {
+    //   add++;
+    //   answer += add;
+    // } else {
+    //   add = 0;
+    // }
 
-  //////////////
-  const result = 0;
-  const answer = arrAllSumAndResults(arr1, result);
-  //////////////
+    e === 1 ? (add++, (answer += add)) : (add = 0);
+  });
+
   return answer;
 }
 
-/////////////////////////// 유용한 함수
-const arrAllSumAndResults = (arr, result) => {
-  arr.forEach((e) => (result += e));
-  return result;
-};
-//////////////////////////
-
-console.log(solution(10));
-
-// 단순 배열요소들끼리 합산한 결과를 원하는거면 forEach()가 더 간단하다.
+const array = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+console.log(solution(array));
