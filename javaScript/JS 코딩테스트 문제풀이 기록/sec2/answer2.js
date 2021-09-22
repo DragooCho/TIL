@@ -9,9 +9,10 @@ function solution(arr) {
   //   }
   // });
 
-  arr.map((e) => {
+  arr.forEach((e) => {
     e > longer ? ((longer = e), answer++) : answer;
   });
+  // map()도 쓸 수 있으나 새배열로 반환 해주는게 아니면 forEach()도 유효하다.
 
   return answer;
 }
