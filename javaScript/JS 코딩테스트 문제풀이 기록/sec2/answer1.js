@@ -9,6 +9,6 @@ function solution(arr) {
   return answer;
 }
 
-let array = [92, 7, 3, 9, 5, 6, 12];
+let array = [94, 7, 3, 9, 5, 6, 12];
 
 console.log(solution(array));

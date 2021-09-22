@@ -1,15 +1,24 @@
-function solution(a, b, c) {
-  let arr = [a, b, c],
-    MAX = Math.max(...arr),
-    answer = "YES",
-    sum = arr.reduce((a, b) => a + b); // 배열끼리 더하는 방법 1 새 변수로 할당해야한다.
-  // arr.forEach((e) => (sum += e)); // 배열끼리 더하는 방법 2
+function solution(arr) {
+  let answer = 0,
+    longer = 0;
 
-  if (MAX >= sum - MAX) answer = "NO";
+  // arr.map((e) => {
+  //   if (e > longer) {
+  //     longer = e;
+  //     answer++;
+  //   }
+  // });
+
+  arr.map((e) => {
+    e > longer ? ((longer = e), answer++) : answer;
+  });
 
   return answer;
 }
 
-console.log(solution(20, 20, 20));
+// for문을 두번 돌아 푸는 방법이 있으나 O(n2)라는 시간복잡도 효율이 낮아진다.
+// o(n)으로도 풀 수있으니 이 방법을 쓰는게 좋다.
 
-// 크거나 같다고 해야 해결된다.
+let array = [130, 135, 148, 140, 145, 150, 150, 153];
+
+console.log(solution(array));
