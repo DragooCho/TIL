@@ -9,7 +9,6 @@ function solution(arr) {
     // } else {
     //   add = 0;
     // }
-
     e === 1 ? (add++, (answer += add)) : (add = 0);
   });
 
