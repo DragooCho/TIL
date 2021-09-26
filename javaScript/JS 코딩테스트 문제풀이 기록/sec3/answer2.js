@@ -6,7 +6,7 @@ function solution(str) {
   // 알파벳이 아닌 원소를 바꾸기 위해 소문자로 바꾸고 배열로 분해
 
   for (let i = 0; i < Math.floor(n / 2); i++) {
-    let pattern = /^[a-zA-Z]+$/;
+    let pattern = /^[a-z]+$/;
     if (
       pattern.test(str[i]) === false &&
       pattern.test(str[n - 1 - i]) === false
