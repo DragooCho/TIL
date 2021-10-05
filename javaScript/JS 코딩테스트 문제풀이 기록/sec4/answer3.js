@@ -1,7 +1,7 @@
 function solution(arr) {
   let answer = 0;
   let n = arr[0].length;
-  // (i,j), arr[y][x]
+  // (i,j)는 맨토.멘티, arr[y][x]
 
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
@@ -21,8 +21,8 @@ function solution(arr) {
           if (arr[y][x] === j) mTi = x;
         }
         if (mTo > mTi) testCounters++;
-        // 배열 y를 순회하면서 맨토, 멘티를 구별하고
-        // 맨티보다 맨토의 값이 큰 경우를 임시로 카운트한다.
+        // 배열 y 내부를 순회하면서 맨토, 멘티값을 만든 후
+        // 맨티보다 맨토의 값이 큰 경우에만 임시로 카운트한다.
       }
 
       if (testCounters === arr.length) answer++;
