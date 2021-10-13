@@ -25,6 +25,8 @@ function solution(arr, m) {
     }
 
     answer = Math.max(answer, count);
+    // 순회 할 때마다 비교하면서 최대값이 나왔을때 정답값을 갱신하는 메서드는
+    // Math.max()가 아주 유용하다.
   }
 
   return answer;
